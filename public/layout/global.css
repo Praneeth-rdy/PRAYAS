@@ -1,7 +1,89 @@
-@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700,800&display=swap");
 
 * {
     box-sizing: border-box;
-    font-family: 'Roboto';
 }
+
+body {
+    font-family: 'Nunito';
+    font-weight: normal;
+    font-style: normal;
+    color: #798795;
+    overflow-X: hidden; }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  
+  img {
+    max-width: 100%; }
+  
+  a:focus,
+  input:focus,
+  textarea:focus,
+  button:focus {
+    text-decoration: none;
+    outline: none; }
+  
+  a:focus,
+  a:hover {
+    text-decoration: none; }
+  
+  i,
+  span,
+  a {
+    display: inline-block; }
+  
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle; }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    color: #404040;
+    margin: 0px; }
+  
+  h1 {
+    font-size: 48px; }
+  
+  h2 {
+    font-size: 36px; }
+  
+  h3 {
+    font-size: 28px; }
+  
+  h4 {
+    font-size: 22px; }
+  
+  h5 {
+    font-size: 18px; }
+  
+  h6 {
+    font-size: 16px; }
+  
+  ul, ol {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none; }
+  
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #798795;
+    margin: 0px;
+    font-family: "Nunito", sans-serif; }
+  
