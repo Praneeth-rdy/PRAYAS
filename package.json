@@ -1,6 +1,7 @@
 {
-  "name": "gsheet",
+  "name": "prayas",
   "version": "1.0.0",
+  "author": "praneeth-rdy",
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -8,7 +9,6 @@
     "dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^10.0.0",
