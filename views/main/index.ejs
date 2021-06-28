@@ -3,13 +3,17 @@
 <head>
     <%- include('../layout/head.ejs') %>
     <!-- Update the href of the following custom script -->
-    <link rel="stylesheet" href="/main/home/index-styles.css">
+    <link rel="stylesheet" href="/main/home/css/index-styles.css">
     
     <!--====== Default CSS ======-->
-    <link rel="stylesheet" href="main/home/consult/css/default.css">
+    <link rel="stylesheet" href="main/home/css/default.css">
     
     <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="main/home/consult/css/style.css">
+    <link rel="stylesheet" href="main/home/css/consult-style.css">
+
+    <!-- Basic -->
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="main/home/css/basic-style.css">
 </head>
 <body>
     <%- include('../layout/navbar.ejs') %>
@@ -89,7 +93,65 @@
             </div> <!-- objective wrapper -->
         </div> <!-- container -->
     </section>
+
     <!-- Services from basic-->
+    <section id="features" class="services-area pt-120">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-title text-center pb-40">
+                        <div class="line m-auto"></div>
+                        <h3 class="title">Clean and simple design, <span> Comes with everything you need to get started!</span></h3>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-7 col-sm-8">
+                    <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <div class="services-icon">
+                            <img class="shape" src="main/home/basic/images/services-shape.svg" alt="shape">
+                            <img class="shape-1" src="main/home/basic/images/services-shape-1.svg" alt="shape">
+                            <i class="lni-baloon"></i>
+                        </div>
+                        <div class="services-content mt-30">
+                            <h4 class="services-title"><a href="#">Clean</a></h4>
+                            <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
+                            <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-8">
+                    <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="services-icon">
+                            <img class="shape" src="main/home/basic/images/services-shape.svg" alt="shape">
+                            <img class="shape-1" src="main/home/basic/images/services-shape-2.svg" alt="shape">
+                            <i class="lni-cog"></i>
+                        </div>
+                        <div class="services-content mt-30">
+                            <h4 class="services-title"><a href="#">Robust</a></h4>
+                            <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
+                            <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+                <div class="col-lg-4 col-md-7 col-sm-8">
+                    <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                        <div class="services-icon">
+                            <img class="shape" src="main/home/basic/images/services-shape.svg" alt="shape">
+                            <img class="shape-1" src="main/home/basic/images/services-shape-3.svg" alt="shape">
+                            <i class="lni-bolt-alt"></i>
+                        </div>
+                        <div class="services-content mt-30">
+                            <h4 class="services-title"><a href="#">Powerful</a></h4>
+                            <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
+                            <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                        </div>
+                    </div> <!-- single services -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
     <!-- Gallery Consulting -->
     <section id="portfolio" class="project-masonry-area pt-115">
         <div class="container">
@@ -197,6 +259,66 @@
         </div> <!-- container -->
     </section>
     <!-- Blog Basic-->
+    <section id="blog" class="blog-area pt-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-35">
+                        <div class="line"></div>
+                        <h3 class="title"><span>Our Recent</span> Blog Posts</h3>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-7">
+                    <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                        <div class="blog-image">
+                            <img src="main/home/basic/images/blog-1.jpg" alt="blog">
+                        </div>
+                        <div class="blog-content">
+                            <ul class="meta">
+                                <li>Posted By: <a href="#">Admin</a></li>
+                                <li>03 June, 2023</li>
+                            </ul>
+                            <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
+                            <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                        </div>
+                    </div> <!-- single blog -->
+                </div> 
+                <div class="col-lg-4 col-md-7">
+                    <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                        <div class="blog-image">
+                            <img src="main/home/basic/images/blog-2.jpg" alt="blog">
+                        </div>
+                        <div class="blog-content">
+                            <ul class="meta">
+                                <li>Posted By: <a href="#">Admin</a></li>
+                                <li>03 June, 2023</li>
+                            </ul>
+                            <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
+                            <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                        </div>
+                    </div> <!-- single blog -->
+                </div> 
+                <div class="col-lg-4 col-md-7">
+                    <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                        <div class="blog-image">
+                            <img src="main/home/basic/images/blog-3.jpg" alt="blog">
+                        </div>
+                        <div class="blog-content">
+                            <ul class="meta">
+                                <li>Posted By: <a href="#">Admin</a></li>
+                                <li>03 June, 2023</li>
+                            </ul>
+                            <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
+                            <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                        </div>
+                    </div> <!-- single blog -->
+                </div> 
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+
 
     <%- include('../layout/footer.ejs') %>
     <%- include('../layout/scripts.ejs') %>

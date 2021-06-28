@@ -1,3 +1,30 @@
+<!--====== PRELOADER PART START ======-->
+
+<div class="preloader">
+    <div class="loader">
+        <div class="ytp-spinner">
+            <div class="ytp-spinner-container">
+                <div class="ytp-spinner-rotator">
+                    <div class="ytp-spinner-left">
+                        <div class="ytp-spinner-circle"></div>
+                    </div>
+                    <div class="ytp-spinner-right">
+                        <div class="ytp-spinner-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(window).on('load', function (event) {
+        $('.preloader').delay(500).fadeOut(500);
+    });
+</script>
+
+<!--====== PRELOADER PART ENDS ======-->
+
 <header class="header">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container"><a class="navbar-brand" href="#"><img src="img/logo.svg" alt="" width="110">Hi</a>
