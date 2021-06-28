@@ -1,0 +1,34 @@
+/* Welcome section */
+.welcome-content{
+    padding-left: 5vw;
+}
+
+.welcome-section{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    align-items: center;
+    background-color: #f1f1f1;
+    height: 500px;
+}
+
+.welcome-section .welcome-content{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome-section .welcome-image-container img{
+    max-width: 100%;
+}
+
+.welcome-content h1{
+    text-align: left;
+}
+
+.welcome-content p{
+    margin-bottom: 10px;
+}
+
+.welcome-content button{
+    padding: 6px;
+    font-size: 12px;
+}
