@@ -1,19 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../layout/head.ejs') %>
-    <!-- Update the href of the following custom script -->
-    <link rel="stylesheet" href="/main/contact/contact-styles.css">
+        <!-- Update the href of the following custom script -->
+        <link rel="stylesheet" href="/main/contact/contact-styles.css">
 </head>
+
 <body>
     <%- include('../layout/navbar.ejs') %>
-    
-    <!-- Your main body goes here -->
-    <!-- Get In Touch Form -->
 
-    <%- include('../layout/footer.ejs') %>
-    <%- include('../layout/scripts.ejs') %>
-    <!-- Update the src of the following custom script -->
-    <script src=""></script>
+        <!-- Your main body goes here -->
+        <!-- Get In Touch Form -->
+        <div class="main-container">
+            <section class="heading-section">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="col-12 text-center">Contact Us</h2>
+                        <p class="col-12 p-4 text-center"></p>
+                    </div>
+                </div>
+            </section>
+            <section class="contact-section container">
+                <form id="contact_form" autocomplete="on">
+                    <div class="form-row">
+                        <div class="col-12 col-md-6 form-group">
+                            <label for="name">Name</label>
+                            <input type="name" class="form-control" id="name" name="name" placeholder="Enter name" required>
+                        </div>
+                        <div class="col-12 col-md-6 form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                            <small id="emailHelp" class="form-text text-muted">
+                                We'll never share your email with anyone else.
+                            </small>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-12 col-md-6 form-group">
+                            <label for="mobile">Mobile Number</label>
+                            <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Enter name" required>
+                        </div>
+                        <div class="col-12 col-md-6 form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" placeholder="Enter message" required></textarea>
+                    </div>
+                    <div>
+                        <h6 id="form-status"></h6>
+                    </div>
+                    <button id="contact-submit" type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </section>
+        </div>
+
+        <%- include('../layout/footer.ejs') %>
+        <%- include('../layout/scripts.ejs') %>
+        <!-- Update the src of the following custom script -->
+        <script src="/main/contact/google-sheet.js"></script>
 </body>
+
 </html>
