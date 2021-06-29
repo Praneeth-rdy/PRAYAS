@@ -22,10 +22,10 @@ exports.projects = async (request, response, next) => {
 };
 
 exports.members = async (request, response, next) => {
-    const [sheetName, authToken, isVertical] = ['HomeVars', process.env.AUTH_TOKEN, true];
-    // const jsonResponse = await fetchData({ sheetName, authToken, isVertical });
-    // console.log(jsonResponse);
-    response.render("main/members", {title: 'Members'});
+    const [sheetName, authToken] = ['Members', process.env.AUTH_TOKEN];
+    const jsonResponse = await fetchData({ sheetName, authToken });
+    console.log(jsonResponse);
+    response.render("main/members", {title: 'Members', data: jsonResponse.data});
 };
 
 exports.gallery = async (request, response, next) => {

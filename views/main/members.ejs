@@ -9,6 +9,36 @@
     <%- include('../layout/navbar.ejs') %>
     
     <!-- Your main body goes here -->
+    <div class="main-container">
+        <section class="heading-section">
+            <div class="container">
+                <div class="row">
+                    <h2 class="col-12 text-center">Our Team</h2>
+                    <p class="col-12 p-4 text-center"></p>
+                </div>
+            </div>
+        </section>
+        <section class="members-section">
+            <div class="container">
+                <div class="row">
+                    <% data.forEach((member) => { %>
+                        <div class="member-card">
+                            <img src="<%= member.image %>" />
+                            <h2 class="member-name"><%= member.name %> </h2>
+                            <h3 class="member-designation"><%= member.post %></h3>
+                            <div>
+                                <a class="member-social-icon" href="<%= member.linkedin %>"><i class="fab fa-linkedin"></i></a>
+                                <a class="member-social-icon" href="<%= member.facebook %>"><i class="fab fa-facebook"></i></a>
+                                <a class="member-social-icon" href="mailto:<%= member.email %>"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    <% }); %> 
+                    
+                </div>
+
+            </div>
+        </section>
+    </div>
 
     <%- include('../layout/footer.ejs') %>
     <%- include('../layout/scripts.ejs') %>
