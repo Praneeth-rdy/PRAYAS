@@ -27,3 +27,51 @@ nav.navbar {
 .navbar-brand img {
     margin-right: 5px;
 }
+
+/*===== Project Masonry =====*/
+.project-menu ul li {
+    display: inline-block;
+    font-size: 16px;
+    color: #28DF99;
+    margin-left: 10px;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 3px;
+    margin-top: 10px;
+  }
+  @media (max-width: 767px) {
+    .project-menu ul li {
+      margin: 10px 15px 0;
+    }
+  }
+  .project-menu ul li:first-child {
+    margin-left: 0;
+  }
+  @media (max-width: 767px) {
+    .project-menu ul li:first-child {
+      margin: 10px 15px 0;
+    }
+  }
+  .project-menu ul li::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #28DF99;
+    bottom: 0;
+    left: 10%;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+  }
+  .project-menu ul li:hover::before,
+  .project-menu ul li.active::before {
+    width: 90%;
+  }
+  
+  .gallery-masonry {
+    border-radius: 7px;
+    overflow: hidden;
+  }

@@ -13,7 +13,7 @@
 .section-title .sub-title {
   font-size: 18px;
   font-weight: 400;
-  color: #f14836;
+  color: #28DF99;
   text-transform: uppercase;
 }
 @media (max-width: 767px) {
@@ -50,7 +50,7 @@
   width: 100%;
 }
 .single-gallery .gallery-icon a {
-  background-color: #f14836;
+  background-color: #28DF99;
   width: 120px;
   height: 120px;
   position: absolute;
@@ -125,53 +125,7 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
-/*===== Project Masonry =====*/
-.project-menu ul li {
-  display: inline-block;
-  font-size: 16px;
-  color: #798795;
-  margin-left: 10px;
-  cursor: pointer;
-  position: relative;
-  padding-bottom: 3px;
-  margin-top: 10px;
-}
-@media (max-width: 767px) {
-  .project-menu ul li {
-    margin: 10px 15px 0;
-  }
-}
-.project-menu ul li:first-child {
-  margin-left: 0;
-}
-@media (max-width: 767px) {
-  .project-menu ul li:first-child {
-    margin: 10px 15px 0;
-  }
-}
-.project-menu ul li::before {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: #798795;
-  bottom: 0;
-  left: 10%;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-}
-.project-menu ul li:hover::before,
-.project-menu ul li.active::before {
-  width: 90%;
-}
 
-.gallery-masonry {
-  border-radius: 7px;
-  overflow: hidden;
-}
 
 /*===========================
         05.objective css 
@@ -209,258 +163,6 @@
 .single-objective .objective-content .text {
   margin-top: 15px;
 }
-.single-objective .shape {
-  position: absolute;
-}
-.single-objective .shape.shape-1 {
-  left: 35px;
-  bottom: -50px;
-  -webkit-animation: rotated 15s infinite linear;
-  -moz-animation: rotated 15s infinite linear;
-  -o-animation: rotated 15s infinite linear;
-  animation: rotated 15s infinite linear;
-}
-.single-objective .shape.shape-2 {
-  top: 20px;
-  right: 85px;
-  -webkit-animation: animationFramesOne 10s infinite linear;
-  -moz-animation: animationFramesOne 10s infinite linear;
-  -o-animation: animationFramesOne 10s infinite linear;
-  animation: animationFramesOne 10s infinite linear;
-}
-.single-objective .shape.shape-3 {
-  left: 100px;
-  bottom: -10px;
-  -webkit-animation: rotated 15s infinite linear;
-  -moz-animation: rotated 15s infinite linear;
-  -o-animation: rotated 15s infinite linear;
-  animation: rotated 15s infinite linear;
-}
-.single-objective .shape.shape-4 {
-  left: 30px;
-  top: 10px;
-  -webkit-animation: rotated 15s infinite linear;
-  -moz-animation: rotated 15s infinite linear;
-  -o-animation: rotated 15s infinite linear;
-  animation: rotated 15s infinite linear;
-}
-.single-objective .shape.shape-5 {
-  right: 100px;
-  bottom: -40px;
-  -webkit-animation: animationFramesTwo 10s infinite linear;
-  -moz-animation: animationFramesTwo 10s infinite linear;
-  -o-animation: animationFramesTwo 10s infinite linear;
-  animation: animationFramesTwo 10s infinite linear;
-}
-
-@-webkit-keyframes rotated {
-  0% {
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    -ms-transform: rotate(0);
-    -o-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotated {
-  0% {
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    -ms-transform: rotate(0);
-    -o-transform: rotate(0);
-    transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes animationFramesOne {
-  0% {
-    -webkit-transform: translate(0px, 0px) rotate(0deg);
-    -moz-transform: translate(0px, 0px) rotate(0deg);
-    -ms-transform: translate(0px, 0px) rotate(0deg);
-    -o-transform: translate(0px, 0px) rotate(0deg);
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-  20% {
-    -webkit-transform: translate(73px, -1px) rotate(36deg);
-    -moz-transform: translate(73px, -1px) rotate(36deg);
-    -ms-transform: translate(73px, -1px) rotate(36deg);
-    -o-transform: translate(73px, -1px) rotate(36deg);
-    transform: translate(73px, -1px) rotate(36deg);
-  }
-  40% {
-    -webkit-transform: translate(141px, 72px) rotate(72deg);
-    -moz-transform: translate(141px, 72px) rotate(72deg);
-    -ms-transform: translate(141px, 72px) rotate(72deg);
-    -o-transform: translate(141px, 72px) rotate(72deg);
-    transform: translate(141px, 72px) rotate(72deg);
-  }
-  60% {
-    -webkit-transform: translate(83px, 122px) rotate(108deg);
-    -moz-transform: translate(83px, 122px) rotate(108deg);
-    -ms-transform: translate(83px, 122px) rotate(108deg);
-    -o-transform: translate(83px, 122px) rotate(108deg);
-    transform: translate(83px, 122px) rotate(108deg);
-  }
-  80% {
-    -webkit-transform: translate(-40px, 72px) rotate(144deg);
-    -moz-transform: translate(-40px, 72px) rotate(144deg);
-    -ms-transform: translate(-40px, 72px) rotate(144deg);
-    -o-transform: translate(-40px, 72px) rotate(144deg);
-    transform: translate(-40px, 72px) rotate(144deg);
-  }
-  100% {
-    -webkit-transform: translate(0px, 0px) rotate(0deg);
-    -moz-transform: translate(0px, 0px) rotate(0deg);
-    -ms-transform: translate(0px, 0px) rotate(0deg);
-    -o-transform: translate(0px, 0px) rotate(0deg);
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-}
-@-webkit-keyframes animationFramesOne {
-  0% {
-    -webkit-transform: translate(0px, 0px) rotate(0deg);
-    -moz-transform: translate(0px, 0px) rotate(0deg);
-    -ms-transform: translate(0px, 0px) rotate(0deg);
-    -o-transform: translate(0px, 0px) rotate(0deg);
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-  20% {
-    -webkit-transform: translate(73px, -1px) rotate(36deg);
-    -moz-transform: translate(73px, -1px) rotate(36deg);
-    -ms-transform: translate(73px, -1px) rotate(36deg);
-    -o-transform: translate(73px, -1px) rotate(36deg);
-    transform: translate(73px, -1px) rotate(36deg);
-  }
-  40% {
-    -webkit-transform: translate(141px, 72px) rotate(72deg);
-    -moz-transform: translate(141px, 72px) rotate(72deg);
-    -ms-transform: translate(141px, 72px) rotate(72deg);
-    -o-transform: translate(141px, 72px) rotate(72deg);
-    transform: translate(141px, 72px) rotate(72deg);
-  }
-  60% {
-    -webkit-transform: translate(83px, 122px) rotate(108deg);
-    -moz-transform: translate(83px, 122px) rotate(108deg);
-    -ms-transform: translate(83px, 122px) rotate(108deg);
-    -o-transform: translate(83px, 122px) rotate(108deg);
-    transform: translate(83px, 122px) rotate(108deg);
-  }
-  80% {
-    -webkit-transform: translate(-40px, 72px) rotate(144deg);
-    -moz-transform: translate(-40px, 72px) rotate(144deg);
-    -ms-transform: translate(-40px, 72px) rotate(144deg);
-    -o-transform: translate(-40px, 72px) rotate(144deg);
-    transform: translate(-40px, 72px) rotate(144deg);
-  }
-  100% {
-    -webkit-transform: translate(0px, 0px) rotate(0deg);
-    -moz-transform: translate(0px, 0px) rotate(0deg);
-    -ms-transform: translate(0px, 0px) rotate(0deg);
-    -o-transform: translate(0px, 0px) rotate(0deg);
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-}
-@keyframes animationFramesTwo {
-  0% {
-    -webkit-transform: translate(0px, 0px) rotate(0deg);
-    -moz-transform: translate(0px, 0px) rotate(0deg);
-    -ms-transform: translate(0px, 0px) rotate(0deg);
-    -o-transform: translate(0px, 0px) rotate(0deg);
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-  20% {
-    -webkit-transform: translate(-73px, 1px) rotate(36deg);
-    -moz-transform: translate(-73px, 1px) rotate(36deg);
-    -ms-transform: translate(-73px, 1px) rotate(36deg);
-    -o-transform: translate(-73px, 1px) rotate(36deg);
-    transform: translate(-73px, 1px) rotate(36deg);
-  }
-  40% {
-    -webkit-transform: translate(-141px, -72px) rotate(72deg);
-    -moz-transform: translate(-141px, -72px) rotate(72deg);
-    -ms-transform: translate(-141px, -72px) rotate(72deg);
-    -o-transform: translate(-141px, -72px) rotate(72deg);
-    transform: translate(-141px, -72px) rotate(72deg);
-  }
-  60% {
-    -webkit-transform: translate(-83px, -122px) rotate(108deg);
-    -moz-transform: translate(-83px, -122px) rotate(108deg);
-    -ms-transform: translate(-83px, -122px) rotate(108deg);
-    -o-transform: translate(-83px, -122px) rotate(108deg);
-    transform: translate(-83px, -122px) rotate(108deg);
-  }
-  80% {
-    -webkit-transform: translate(40px, -72px) rotate(144deg);
-    -moz-transform: translate(40px, -72px) rotate(144deg);
-    -ms-transform: translate(40px, -72px) rotate(144deg);
-    -o-transform: translate(40px, -72px) rotate(144deg);
-    transform: translate(40px, -72px) rotate(144deg);
-  }
-  100% {
-    -webkit-transform: translate(0px, 0px) rotate(0deg);
-    -moz-transform: translate(0px, 0px) rotate(0deg);
-    -ms-transform: translate(0px, 0px) rotate(0deg);
-    -o-transform: translate(0px, 0px) rotate(0deg);
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-}
-@-webkit-keyframes animationFramesTwo {
-  0% {
-    -webkit-transform: translate(0px, 0px) rotate(0deg);
-    -moz-transform: translate(0px, 0px) rotate(0deg);
-    -ms-transform: translate(0px, 0px) rotate(0deg);
-    -o-transform: translate(0px, 0px) rotate(0deg);
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-  20% {
-    -webkit-transform: translate(-73px, 1px) rotate(36deg);
-    -moz-transform: translate(-73px, 1px) rotate(36deg);
-    -ms-transform: translate(-73px, 1px) rotate(36deg);
-    -o-transform: translate(-73px, 1px) rotate(36deg);
-    transform: translate(-73px, 1px) rotate(36deg);
-  }
-  40% {
-    -webkit-transform: translate(-141px, -72px) rotate(72deg);
-    -moz-transform: translate(-141px, -72px) rotate(72deg);
-    -ms-transform: translate(-141px, -72px) rotate(72deg);
-    -o-transform: translate(-141px, -72px) rotate(72deg);
-    transform: translate(-141px, -72px) rotate(72deg);
-  }
-  60% {
-    -webkit-transform: translate(-83px, -122px) rotate(108deg);
-    -moz-transform: translate(-83px, -122px) rotate(108deg);
-    -ms-transform: translate(-83px, -122px) rotate(108deg);
-    -o-transform: translate(-83px, -122px) rotate(108deg);
-    transform: translate(-83px, -122px) rotate(108deg);
-  }
-  80% {
-    -webkit-transform: translate(40px, -72px) rotate(144deg);
-    -moz-transform: translate(40px, -72px) rotate(144deg);
-    -ms-transform: translate(40px, -72px) rotate(144deg);
-    -o-transform: translate(40px, -72px) rotate(144deg);
-    transform: translate(40px, -72px) rotate(144deg);
-  }
-  100% {
-    -webkit-transform: translate(0px, 0px) rotate(0deg);
-    -moz-transform: translate(0px, 0px) rotate(0deg);
-    -ms-transform: translate(0px, 0px) rotate(0deg);
-    -o-transform: translate(0px, 0px) rotate(0deg);
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-}
 
 /*===== objective 2 =====*/
 /* .single-objective-2 .objective-icon {
@@ -471,9 +173,9 @@
     height: 50px;
     line-height: 50px;
     text-align: center;
-    border: 1px dashed #f14836;
+    border: 1px dashed #28DF99;
     font-size: 36px;
-    color: #f14836;
+    color: #28DF99;
 }
 .single-objective-2 .objective-content {
     padding-left: 30px;
@@ -523,13 +225,13 @@
     transition: all 0.3s ease-out 0s;
 }
 .single-objective-3 .objective-content .objective-title a:hover {
-    color: #f14836;
+    color: #28DF99;
 }
 .single-objective-3 .objective-content .text {
     padding-top: 15px;
 }
 .single-objective-3 .objective-content .more {
-    color: #798795;
+    color: #28DF99;
     font-size: 36px;
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
@@ -539,7 +241,7 @@
     margin-top: 30px;
 }
 .single-objective-3 .objective-content .more:hover {
-    color: #f14836;
+    color: #28DF99;
 }  */
 
 /*
@@ -664,7 +366,7 @@
   height: 100%;
   border-style: solid;
   /* Spinner Color */
-  border-color: #361cc1 #361cc1 #e1e1e1;
+  border-color: #28DF99 #28DF99 #e1e1e1;
   border-radius: 50%;
   border-width: 6px;
 }
@@ -1026,7 +728,7 @@
   color: #361cc1;
 }
 .single-services:hover {
-  border-color: #fe7a7b;
+  border-color: #28DF99;
 }
 .single-services:hover .services-icon .shape {
   -webkit-transform: rotate(25deg);
@@ -1074,7 +776,7 @@
 }
 .single-blog .blog-content .more {
   font-size: 16px;
-  color: #fe7e71;
+  color: #28DF99;
   margin-top: 30px;
 }
 .single-blog .blog-content .more i {

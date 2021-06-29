@@ -1,18 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../layout/head.ejs') %>
-    <!-- Update the href of the following custom script -->
-    <link rel="stylesheet" href="/main/contact/projects-styles.css">
+        <!-- Update the href of the following custom script -->
+        <link rel="stylesheet" href="/main/projects/projects-styles.css">
 </head>
+
 <body>
     <%- include('../layout/navbar.ejs') %>
-    
-    <!-- Your main body goes here -->
 
-    <%- include('../layout/footer.ejs') %>
-    <%- include('../layout/scripts.ejs') %>
-    <!-- Update the src of the following custom script -->
-    <script src=""></script>
+        <!-- Your main body goes here -->
+        <div class="main-container">
+            <section class="heading-section">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="col-12 text-center">Current Projects</h2>
+                        <p class="col-12 p-4 text-center">
+                            Our team is currently working on the following projects which cover many major streams of
+                            Indian economy.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="projects-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="card-project col-12 col-md-6 col-lg-4">
+                            <a href="https://ekalavya.io/" class="card">
+                                <div class="card__head">
+                                    <div class="card__image"></div>
+                                    <div class="card__author">
+                                        <div class="author">
+                                            <img src="/main/projects/images/ekalavya-logo.jpeg" alt="Author of Tobias Reich"
+                                                class="author__image">
+                                            <div class="author__content">
+                                                <p class="author__header">EkaLavya</p>
+                                                <!-- <p class="author__subheader">Web developer and designer</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__body">
+                                    <!-- <h2 class="card__headline">Hover me</h2> -->
+                                    <p class="card__text">
+                                        EkaLavya aims to make quality
+                                        digital education
+                                        affordable, and helps the students in fulfilling their potential in learning.
+                                    </p>
+                                </div>
+                                <div class="card__foot">
+                                    <span class="card__link">Read more</span>
+                                </div>
+                                <div class="card__border"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-project col-12 col-md-6 col-lg-4">
+                            <a href="http://collar-code.com/" class="card">
+                                <div class="card__head">
+                                    <div class="card__image"></div>
+                                    <div class="card__author">
+                                        <div class="author">
+                                            <img src="/main/projects/images/collar-code-icon.png" alt="Author of Tobias Reich"
+                                                class="author__image">
+                                            <div class="author__content">
+                                                <p class="author__header">Collar-Code </p>
+                                                <!-- <p class="author__subheader">Web developer and designer</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__body">
+                                    <!-- <h2 class="card__headline">Hover me</h2> -->
+                                    <p class="card__text">Collar-Code helps customers to get connected with reliable
+                                        home service
+                                        professionals like electricians, car drivers, car cleaners, washers, servicing,
+                                        home repairers, etc 
+                                    </p>
+                                </div>
+                                <div class="card__foot">
+                                    <span class="card__link">Read more</span>
+                                </div>
+                                <div class="card__border"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-project col-12 col-md-6 col-lg-4">
+                            <a href="./komcluez/index.html" class="card">
+                                <div class="card__head">
+                                    <div class="card__image"></div>
+                                    <div class="card__author">
+                                        <div class="author">
+                                            <img src="/main/projects/images/komcluez.jpg" alt="Author of Tobias Reich"
+                                                class="author__image">
+                                            <div class="author__content">
+                                                <p class="author__header">KomCluez</p>
+                                                <!-- <p class="author__subheader">Web developer and designer</p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card__body">
+                                    <!-- <h2 class="card__headline">Hover me</h2> -->
+                                    <p class="card__text">Kom Cluez is the best and affordable software for businesses
+                                        to handdle all their
+                                        financials at one place. Kom Cluez has personalized softwares for every type of
+                                        business in the market.
+                                    </p>
+                                </div>
+                                <div class="card__foot">
+                                    <span class="card__link">Read more</span>
+                                </div>
+                                <div class="card__border"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <%- include('../layout/footer.ejs') %>
+            <%- include('../layout/scripts.ejs') %>
+                <!-- Update the src of the following custom script -->
+                <script src="/main/projects/projects.js"></script>
 </body>
+
 </html>

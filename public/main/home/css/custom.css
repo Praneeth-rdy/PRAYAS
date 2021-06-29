@@ -46,6 +46,11 @@
     padding-bottom: 0;
 }
 
+.objective-icon i {
+    font-size: 42px;
+    color: #28DF99;
+}
+
 @media (min-width: 767px) {
     .welcome-section {
         padding-top: 40px;

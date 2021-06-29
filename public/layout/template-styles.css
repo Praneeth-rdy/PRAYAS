@@ -68,7 +68,7 @@ section {
 
 .footer-link:hover,
 .footer-link:focus {
-  color: #99F3BD;
+  color: #5cb85c;
   text-decoration: none;
 }
 
@@ -92,7 +92,7 @@ section {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  color: #99F3BD;
+  color: #5cb85c;
 }
 
 .social-link {
@@ -112,17 +112,17 @@ section {
 
 .social-link:hover,
 .social-link:focus {
-  background: #99F3BD;
+  background: #5cb85c;
   color: #fff;
   text-decoration: none;
-  border-color: #99F3BD;
+  border-color: #5cb85c;
 }
 
 .scropll-top-btn {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #99F3BD;
+  background: #5cb85c;
   border: 3px solid #cbc9ef;
   display: -ms-flexbox;
   display: flex;
