@@ -1,347 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../layout/head.ejs') %>
 
-    <!--====== Default CSS ======-->
-    <link rel="stylesheet" href="main/home/css/default.css">
+        <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+            integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+            async></script>
 
-    <!--====== Templates' Compiled CSS ======-->
-    <link rel="stylesheet" href="/main/home/css/index-styles.css">
 
-    <!--====== Custom CSS ======-->
-    <link rel="stylesheet" href="/main/home/css/custom.css">
-    
+        <!--====== Default Template CSS ======-->
+        <link rel="stylesheet" href="main/home/css/default.css">
+
+        <!--====== Templates' Styles Compiled CSS ======-->
+        <link rel="stylesheet" href="/main/home/css/index-styles.css">
+
+        <!--====== Custom CSS ======-->
+        <link rel="stylesheet" href="/main/home/css/custom.css">
+
 </head>
+
 <body>
     <%- include('../layout/navbar.ejs') %>
-    
-    <!-- Your main body goes here -->
-    <!-- Slide -->
-    <section class="pt-0 pb-0">
-        <div class="container-fluid">
-          <div class="row welcome-section">
-            <!-- <center style="margin: auto;">
+
+        <!-- Your main body goes here -->
+        <!-- Slide -->
+        <section class="pt-0 pb-0">
+            <div class="container-fluid">
+                <div class="row welcome-section">
+                    <!-- <center style="margin: auto;">
                         <header class="section-header"><h3>About US</h3></header>
                     </center> -->
-            <div class="welcome-content col-12 col-md-6">
-              <h1>Social Enterprise</h1>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a
-              </p>
-              <a href="/about" class="btn btn-success">Know More</a>
-            </div>
-            <div class="welcome-image-container col-0 col-md-4">
-              <img class="d-none d-md-block" src="/main/home/images/welcome.png" />
-            </div>
-          </div>
-        </div>
-      </section>
-    <!-- Intro -->
-    <!-- Objectives Consulting-->
-    <section id="objective" class="objective-area pt-105">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-8">
-                    <div class="section-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <h6 class="sub-title">Why Us</h6>
-                        <h4 class="title">The reasons to choose us <span>as your business partner</span></h4>
-                    </div> <!-- section title -->
+                    <div class="welcome-content col-12 col-md-6">
+                        <h1>Social Enterprise</h1>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a
+                        </p>
+                        <a href="/about" class="btn btn-success">Know More</a>
+                    </div>
+                    <div class="welcome-image-container col-0 col-md-4">
+                        <img class="d-none d-md-block" src="/layout/images/prayas_sub_logo.png" width="300" />
+                    </div>
                 </div>
-            </div> <!-- row -->
-            <div class="objective-wrapper mt-60 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                <div class="row no-gutters justify-content-center">
-                    <div class="col-lg-4 col-md-7">
-                        <div class="single-objective d-flex">
-                            <div class="objective-icon">
-                                <img src="main/home/images/service-1.png" alt="Icon">
-                            </div>
-                            <div class="objective-content media-body">
-                                <h4 class="objective-title">Highly Experienced</h4>
-                                <p class="text">Lorem Ipsum is simply dummy tex of the printing and typesetting industry. Lorem Ipsum .</p>
-                            </div>
-                            <div class="shape shape-1">
-                                <img src="main/home/images/shape/shape-1.svg" alt="shape">
-                            </div>
-                            <div class="shape shape-2">
-                                <img src="main/home/images/shape/shape-2.svg" alt="shape">
-                            </div>
-                        </div> <!-- single objective -->
+            </div>
+        </section>
+        <!-- Intro -->
+        <section class="intro">
+            <div class="container">
+                <div class="row">
+                    <h2 class="col-12">Who are we?</h2>
+                    <p class="col-12 p-4">
+                        <span class="intro-title">We are</span> a team of individuals constantly supporting and helping
+                        rural as well as institutional
+                        enterprises and making them a social enterprise.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Objectives Consulting-->
+        <section id="objective" class="objective-area pt-105">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8">
+                        <div class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
+                            <!-- <h6 class="sub-title">Why Us</h6> -->
+                            <h2 class="title">Our Objectives <span></span></h2>
+                        </div> <!-- section title -->
                     </div>
-                    <div class="col-lg-4 col-md-7">
-                        <div class="single-objective objective-border d-flex">
-                            <div class="objective-icon">
-                                <img src="main/home/images/service-2.png" alt="Icon">
+                </div> <!-- row -->
+                <div class="objective-wrapper mt-60 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-lg-4 col-md-7">
+                            <div class="single-objective d-flex">
+                                <div class="objective-icon">
+                                    <img src="main/home/images/service-1.png" alt="Icon">
+                                </div>
+                                <div class="objective-content media-body">
+                                    <h4 class="objective-title">Highly Experienced</h4>
+                                    <p class="text">Lorem Ipsum is simply dummy tex of the printing and typesetting
+                                        industry. Lorem Ipsum .</p>
+                                </div>
+                            </div> <!-- single objective -->
+                        </div>
+                        <div class="col-lg-4 col-md-7">
+                            <div class="single-objective objective-border d-flex">
+                                <div class="objective-icon">
+                                    <img src="main/home/images/service-2.png" alt="Icon">
+                                </div>
+                                <div class="objective-content media-body">
+                                    <h4 class="objective-title">Bunch of objectives</h4>
+                                    <p class="text">Lorem Ipsum is simply dummy tex of the printing and typesetting
+                                        industry. Lorem Ipsum .</p>
+                                </div>
+                            </div> <!-- single objective -->
+                        </div>
+                        <div class="col-lg-4 col-md-7">
+                            <div class="single-objective d-flex">
+                                <div class="objective-icon">
+                                    <img src="main/home/images/service-3.png" alt="Icon">
+                                </div>
+                                <div class="objective-content media-body">
+                                    <h4 class="objective-title">Quality Support</h4>
+                                    <p class="text">Lorem Ipsum is simply dummy tex of the printing and typesetting
+                                        industry. Lorem Ipsum .</p>
+                                </div>
+                            </div> <!-- single objective -->
+                        </div>
+                        <div class="col-lg-4 col-md-7">
+                            <div class="single-objective d-flex">
+                                <div class="objective-icon">
+                                    <img src="main/home/images/service-1.png" alt="Icon">
+                                </div>
+                                <div class="objective-content media-body">
+                                    <h4 class="objective-title">Highly Experienced</h4>
+                                    <p class="text">Lorem Ipsum is simply dummy tex of the printing and typesetting
+                                        industry. Lorem Ipsum .</p>
+                                </div>
+                            </div> <!-- single objective -->
+                        </div>
+                        <div class="col-lg-4 col-md-7">
+                            <div class="single-objective objective-border d-flex">
+                                <div class="objective-icon">
+                                    <img src="main/home/images/service-2.png" alt="Icon">
+                                </div>
+                                <div class="objective-content media-body">
+                                    <h4 class="objective-title">Bunch of objectives</h4>
+                                    <p class="text">Lorem Ipsum is simply dummy tex of the printing and typesetting
+                                        industry. Lorem Ipsum .</p>
+                                </div>
+                            </div> <!-- single objective -->
+                        </div>
+                        <div class="col-lg-4 col-md-7">
+                            <div class="single-objective d-flex">
+                                <div class="objective-icon">
+                                    <img src="main/home/images/service-3.png" alt="Icon">
+                                </div>
+                                <div class="objective-content media-body">
+                                    <h4 class="objective-title">Quality Support</h4>
+                                    <p class="text">Lorem Ipsum is simply dummy tex of the printing and typesetting
+                                        industry. Lorem Ipsum .</p>
+                                </div>
+                            </div> <!-- single objective -->
+                        </div>
+                        <div class="col-lg-4 col-md-7">
+                            <div class="single-objective d-flex">
+                                <div class="objective-icon">
+                                    <img src="main/home/images/service-1.png" alt="Icon">
+                                </div>
+                                <div class="objective-content media-body">
+                                    <h4 class="objective-title">Highly Experienced</h4>
+                                    <p class="text">Lorem Ipsum is simply dummy tex of the printing and typesetting
+                                        industry. Lorem Ipsum .</p>
+                                </div>
+                            </div> <!-- single objective -->
+                        </div>
+                        <div class="col-lg-4 col-md-7">
+                            <div class="single-objective objective-border d-flex">
+                                <div class="objective-icon">
+                                    <img src="main/home/images/service-2.png" alt="Icon">
+                                </div>
+                                <div class="objective-content media-body">
+                                    <h4 class="objective-title">Bunch of objectives</h4>
+                                    <p class="text">Lorem Ipsum is simply dummy tex of the printing and typesetting
+                                        industry. Lorem Ipsum .</p>
+                                </div>
+                            </div> <!-- single objective -->
+                        </div>
+                        <div class="col-lg-4 col-md-7">
+                            <div class="single-objective d-flex">
+                                <div class="objective-icon">
+                                    <img src="main/home/images/service-3.png" alt="Icon">
+                                </div>
+                                <div class="objective-content media-body">
+                                    <h4 class="objective-title">Quality Support</h4>
+                                    <p class="text">Lorem Ipsum is simply dummy tex of the printing and typesetting
+                                        industry. Lorem Ipsum .</p>
+                                </div>
+                            </div> <!-- single objective -->
+                        </div>
+                    </div> <!-- row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="objective-btn text-center pt-25 pb-15">
+                                <!-- <a class="main-btn main-btn-2" href="#">All objectives</a> -->
                             </div>
-                            <div class="objective-content media-body">
-                                <h4 class="objective-title">Bunch of objectives</h4>
-                                <p class="text">Lorem Ipsum is simply dummy tex of the printing and typesetting industry. Lorem Ipsum .</p>
-                            </div>
-                            <div class="shape shape-3">
-                                <img src="main/home/images/shape/shape-3.svg" alt="shape">
-                            </div>
-                        </div> <!-- single objective -->
+                        </div>
                     </div>
-                    <div class="col-lg-4 col-md-7">
-                        <div class="single-objective d-flex">
-                            <div class="objective-icon">
-                                <img src="main/home/images/service-3.png" alt="Icon">
+                </div> <!-- objective wrapper -->
+            </div> <!-- container -->
+        </section>
+
+        <!-- Services from basic-->
+        <section id="features" class="services-area pt-120">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="section-title text-center pb-40">
+                            <div class="line m-auto"></div>
+                            <h3 class="title">Clean and simple design, <span> Comes with everything you need to get
+                                    started!</span></h3>
+                        </div> <!-- section title -->
+                    </div>
+                </div> <!-- row -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-7 col-sm-8">
+                        <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s"
+                            data-wow-delay="0.2s">
+                            <div class="services-icon">
+                                <img class="shape" src="main/home/images/services-shape.svg" alt="shape">
+                                <img class="shape-1" src="main/home/images/services-shape-1.svg" alt="shape">
+                                <i class="fa fa-book"></i>
                             </div>
-                            <div class="objective-content media-body">
-                                <h4 class="objective-title">Quality Support</h4>
-                                <p class="text">Lorem Ipsum is simply dummy tex of the printing and typesetting industry. Lorem Ipsum .</p>
+                            <div class="services-content mt-30">
+                                <h4 class="services-title"><a href="#">Clean</a></h4>
+                                <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu
+                                    eirmod tempor invidunt labore.</p>
+                                <a class="more" href="#">Learn More <i class="fa fa-chevron-right"></i></a>
                             </div>
-                            <div class="shape shape-4">
-                                <img src="main/home/images/shape/shape-4.svg" alt="shape">
+                        </div> <!-- single services -->
+                    </div>
+                    <div class="col-lg-4 col-md-7 col-sm-8">
+                        <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s"
+                            data-wow-delay="0.5s">
+                            <div class="services-icon">
+                                <img class="shape" src="main/home/images/services-shape.svg" alt="shape">
+                                <img class="shape-1" src="main/home/images/services-shape-2.svg" alt="shape">
+                                <i class="fa fa-book"></i>
                             </div>
-                            <div class="shape shape-5">
-                                <img src="main/home/images/shape/shape-5.svg" alt="shape">
+                            <div class="services-content mt-30">
+                                <h4 class="services-title"><a href="#">Robust</a></h4>
+                                <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu
+                                    eirmod tempor invidunt labore.</p>
+                                <a class="more" href="#">Learn More <i class="fa fa-chevron-right"></i></a>
                             </div>
-                        </div> <!-- single objective -->
+                        </div> <!-- single services -->
+                    </div>
+                    <div class="col-lg-4 col-md-7 col-sm-8">
+                        <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s"
+                            data-wow-delay="0.8s">
+                            <div class="services-icon">
+                                <img class="shape" src="main/home/images/services-shape.svg" alt="shape">
+                                <img class="shape-1" src="main/home/images/services-shape-3.svg" alt="shape">
+                                <i class="fa fa-book"></i>
+                            </div>
+                            <div class="services-content mt-30">
+                                <h4 class="services-title"><a href="#">Powerful</a></h4>
+                                <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu
+                                    eirmod tempor invidunt labore.</p>
+                                <a class="more" href="#">Learn More <i class="fa fa-chevron-right"></i></a>
+                            </div>
+                        </div> <!-- single services -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </section>
+
+        <!-- Gallery Consulting -->
+        <section id="portfolio" class="project-masonry-area pt-115">
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-lg-4">
+                        <div class="section-title pb-20  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                            <h6 class="sub-title">Portfolio</h6>
+                            <h4 class="title">Portfolio <span>Gallery.</span></h4>
+                        </div> <!-- section title -->
+                    </div>
+                </div> <!-- row -->
+                <div class="row grid" data-masonry='{"percentPosition": true }'>
+                    <div class="col-lg-4 col-sm-6 grid-item apps creative laptop">
+                        <div class="single-gallery gallery-masonry mt-30">
+                            <div class="gallery-image">
+                                <img src="main/home/images/protfolio-1.jpg" alt="protfolio">
+                            </div>
+                            <div class="gallery-icon">
+                                <a class="image-popup" href="main/home/images/protfolio-1.jpg">
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div> <!-- single gallery -->
+                    </div>
+                    <div class="col-lg-4 col-sm-6 grid-item branding creative" style="flex-grow:0;">
+                        <div class="single-gallery gallery-masonry mt-30">
+                            <div class="gallery-image">
+                                <img src="main/home/images/protfolio-2.jpg" alt="protfolio">
+                            </div>
+                            <div class="gallery-icon">
+                                <a class="image-popup" href="main/home/images/protfolio-2.jpg">
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div> <!-- single gallery -->
+                    </div>
+                    <div class="col-lg-4 col-sm-6 grid-item apps branding product">
+                        <div class="single-gallery gallery-masonry mt-30">
+                            <div class="gallery-image">
+                                <img src="main/home/images/protfolio-3.jpg" alt="protfolio">
+                            </div>
+                            <div class="gallery-icon">
+                                <a class="image-popup" href="main/home/images/protfolio-3.jpg">
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div> <!-- single gallery -->
+                    </div>
+                    <div class="col-lg-4 col-sm-6 grid-item laptop product">
+                        <div class="single-gallery gallery-masonry mt-30">
+                            <div class="gallery-image">
+                                <img src="main/home/images/protfolio-5.jpg" alt="protfolio">
+                            </div>
+                            <div class="gallery-icon">
+                                <a class="image-popup" href="main/home/images/protfolio-5.jpg">
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div> <!-- single gallery -->
+                    </div>
+                    <div class="col-lg-4 col-sm-6 grid-item branding creative">
+                        <div class="single-gallery gallery-masonry mt-30">
+                            <div class="gallery-image">
+                                <img src="main/home/images/protfolio-4.jpg" alt="protfolio">
+                            </div>
+                            <div class="gallery-icon">
+                                <a class="image-popup" href="main/home/images/protfolio-4.jpg">
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div> <!-- single gallery -->
+                    </div>
+                    <div class="col-lg-4 col-sm-6 grid-item apps laptop product">
+                        <div class="single-gallery gallery-masonry mt-30">
+                            <div class="gallery-image">
+                                <img src="main/home/images/protfolio-6.jpg" alt="protfolio">
+                            </div>
+                            <div class="gallery-icon">
+                                <a class="image-popup" href="main/home/images/protfolio-6.jpg">
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div> <!-- single gallery -->
                     </div>
                 </div> <!-- row -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="objective-btn text-center pt-25 pb-15">
-                            <a class="main-btn main-btn-2" href="#">All objectives</a>
-                        </div> <!-- objective btn -->
+                        <div class="gallery-btn mt-60 text-center">
+                            <a class="main-btn" href="/gallery">Load More</a>
+                        </div>
                     </div>
                 </div> <!-- row -->
-            </div> <!-- objective wrapper -->
-        </div> <!-- container -->
-    </section>
-
-    <!-- Services from basic-->
-    <section id="features" class="services-area pt-120">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="section-title text-center pb-40">
-                        <div class="line m-auto"></div>
-                        <h3 class="title">Clean and simple design, <span> Comes with everything you need to get started!</span></h3>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-7 col-sm-8">
-                    <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <div class="services-icon">
-                            <img class="shape" src="main/home/images/services-shape.svg" alt="shape">
-                            <img class="shape-1" src="main/home/images/services-shape-1.svg" alt="shape">
-                            <i class="fa fa-book"></i>
-                        </div>
-                        <div class="services-content mt-30">
-                            <h4 class="services-title"><a href="#">Clean</a></h4>
-                            <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                            <a class="more" href="#">Learn More <i class="fa fa-chevron-right"></i></a>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-                <div class="col-lg-4 col-md-7 col-sm-8">
-                    <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="services-icon">
-                            <img class="shape" src="main/home/images/services-shape.svg" alt="shape">
-                            <img class="shape-1" src="main/home/images/services-shape-2.svg" alt="shape">
-                            <i class="fa fa-book"></i>
-                        </div>
-                        <div class="services-content mt-30">
-                            <h4 class="services-title"><a href="#">Robust</a></h4>
-                            <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                            <a class="more" href="#">Learn More <i class="fa fa-chevron-right"></i></a>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-                <div class="col-lg-4 col-md-7 col-sm-8">
-                    <div class="single-services text-center mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-                        <div class="services-icon">
-                            <img class="shape" src="main/home/images/services-shape.svg" alt="shape">
-                            <img class="shape-1" src="main/home/images/services-shape-3.svg" alt="shape">
-                            <i class="fa fa-book"></i>
-                        </div>
-                        <div class="services-content mt-30">
-                            <h4 class="services-title"><a href="#">Powerful</a></h4>
-                            <p class="text">Lorem ipsum dolor sit amet,consetetur sadipscing elitr, seddiam nonu eirmod tempor invidunt labore.</p>
-                            <a class="more" href="#">Learn More <i class="fa fa-chevron-right"></i></a>
-                        </div>
-                    </div> <!-- single services -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <!-- Gallery Consulting -->
-    <section id="portfolio" class="project-masonry-area pt-115">
-        <div class="container">
-            <div class="row align-items-end">
-                <div class="col-lg-4">
-                    <div class="section-title pb-20  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                        <h6 class="sub-title">Portfolio</h6>
-                        <h4 class="title">Portfolio <span>Gallery.</span></h4>
-                    </div> <!-- section title -->
-                </div>
-                <div class="col-lg-8">
-                    <div class="project-menu text-center text-sm-left text-lg-right pb-20">
-                        <ul>
-                            <li class="active" data-filter="*">See All</li>
-                            <li data-filter=".apps">Apps</li>
-                            <li data-filter=".branding">Branding</li>
-                            <li data-filter=".creative">Creative</li>
-                            <li data-filter=".laptop">Laptop</li>
-                            <li data-filter=".product">Product</li>
-                        </ul>
-                    </div> <!-- project menu -->
-                </div>
-            </div> <!-- row -->
-            <div class="row grid">
-                <div class="col-lg-4 col-sm-6 grid-item apps creative laptop">
-                    <div class="single-gallery gallery-masonry mt-30">
-                        <div class="gallery-image">
-                            <img src="main/home/images/protfolio-1.jpg" alt="protfolio">
-                        </div>
-                        <div class="gallery-icon">
-                            <a class="image-popup" href="main/home/images/protfolio-1.jpg">
-                                <span></span>
-                            </a>
-                        </div>
-                    </div> <!-- single gallery -->
-                </div>
-                <div class="col-lg-4 col-sm-6 grid-item branding creative">
-                    <div class="single-gallery gallery-masonry mt-30">
-                        <div class="gallery-image">
-                            <img src="main/home/images/protfolio-2.jpg" alt="protfolio">
-                        </div>
-                        <div class="gallery-icon">
-                            <a class="image-popup" href="main/home/images/protfolio-2.jpg">
-                                <span></span>
-                            </a>
-                        </div>
-                    </div> <!-- single gallery -->
-                </div>
-                <div class="col-lg-4 col-sm-6 grid-item apps branding product">
-                    <div class="single-gallery gallery-masonry mt-30">
-                        <div class="gallery-image">
-                            <img src="main/home/images/protfolio-3.jpg" alt="protfolio">
-                        </div>
-                        <div class="gallery-icon">
-                            <a class="image-popup" href="main/home/images/protfolio-3.jpg">
-                                <span></span>
-                            </a>
-                        </div>
-                    </div> <!-- single gallery -->
-                </div>
-                <div class="col-lg-4 col-sm-6 grid-item laptop product">
-                    <div class="single-gallery gallery-masonry mt-30">
-                        <div class="gallery-image">
-                            <img src="main/home/images/protfolio-5.jpg" alt="protfolio">
-                        </div>
-                        <div class="gallery-icon">
-                            <a class="image-popup" href="main/home/images/protfolio-5.jpg">
-                                <span></span>
-                            </a>
-                        </div>
-                    </div> <!-- single gallery -->
-                </div>
-                <div class="col-lg-4 col-sm-6 grid-item branding creative">
-                    <div class="single-gallery gallery-masonry mt-30">
-                        <div class="gallery-image">
-                            <img src="main/home/images/protfolio-4.jpg" alt="protfolio">
-                        </div>
-                        <div class="gallery-icon">
-                            <a class="image-popup" href="main/home/images/protfolio-4.jpg">
-                                <span></span>
-                            </a>
-                        </div>
-                    </div> <!-- single gallery -->
-                </div>
-                <div class="col-lg-4 col-sm-6 grid-item apps laptop product">
-                    <div class="single-gallery gallery-masonry mt-30">
-                        <div class="gallery-image">
-                            <img src="main/home/images/protfolio-6.jpg" alt="protfolio">
-                        </div>
-                        <div class="gallery-icon">
-                            <a class="image-popup" href="main/home/images/protfolio-6.jpg">
-                                <span></span>
-                            </a>
-                        </div>
-                    </div> <!-- single gallery -->
-                </div>
-            </div> <!-- row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="gallery-btn mt-60 text-center">
-                        <a class="main-btn" href="#">Load More</a>
+            </div> <!-- container -->
+        </section>
+        <!-- Blog Basic-->
+        <section id="blog" class="blog-area pt-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="section-title pb-35">
+                            <div class="line"></div>
+                            <h3 class="title"><span>Our Recent</span> Blog Posts</h3>
+                        </div> <!-- section title -->
                     </div>
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-    <!-- Blog Basic-->
-    <section id="blog" class="blog-area pt-120">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-title pb-35">
-                        <div class="line"></div>
-                        <h3 class="title"><span>Our Recent</span> Blog Posts</h3>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-7">
-                    <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <div class="blog-image">
-                            <img src="main/home/images/blog-1.jpg" alt="blog">
-                        </div>
-                        <div class="blog-content">
-                            <ul class="meta">
-                                <li>Posted By: <a href="#">Admin</a></li>
-                                <li>03 June, 2023</li>
-                            </ul>
-                            <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
-                            <a class="more" href="#">Learn More <i class="fa fa-chevron-circle-right"></i></a>
-                        </div>
-                    </div> <!-- single blog -->
-                </div> 
-                <div class="col-lg-4 col-md-7">
-                    <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <div class="blog-image">
-                            <img src="main/home/images/blog-2.jpg" alt="blog">
-                        </div>
-                        <div class="blog-content">
-                            <ul class="meta">
-                                <li>Posted By: <a href="#">Admin</a></li>
-                                <li>03 June, 2023</li>
-                            </ul>
-                            <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
-                            <a class="more" href="#">Learn More <i class="fa fa-chevron-circle-right"></i></a>
-                        </div>
-                    </div> <!-- single blog -->
-                </div> 
-                <div class="col-lg-4 col-md-7">
-                    <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-                        <div class="blog-image">
-                            <img src="main/home/images/blog-3.jpg" alt="blog">
-                        </div>
-                        <div class="blog-content">
-                            <ul class="meta">
-                                <li>Posted By: <a href="#">Admin</a></li>
-                                <li>03 June, 2023</li>
-                            </ul>
-                            <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
-                            <a class="more" href="#">Learn More <i class="fa fa-chevron-circle-right"></i></a>
-                        </div>
-                    </div> <!-- single blog -->
-                </div> 
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
+                </div> <!-- row -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-7">
+                        <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                            <div class="blog-image">
+                                <img src="main/home/images/blog-1.jpg" alt="blog">
+                            </div>
+                            <div class="blog-content">
+                                <ul class="meta">
+                                    <li>Posted By: <a href="#">Admin</a></li>
+                                    <li>03 June, 2023</li>
+                                </ul>
+                                <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor
+                                    invidunt labore.</p>
+                                <a class="more" href="#">Learn More <i class="fa fa-chevron-circle-right"></i></a>
+                            </div>
+                        </div> <!-- single blog -->
+                    </div>
+                    <div class="col-lg-4 col-md-7">
+                        <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <div class="blog-image">
+                                <img src="main/home/images/blog-2.jpg" alt="blog">
+                            </div>
+                            <div class="blog-content">
+                                <ul class="meta">
+                                    <li>Posted By: <a href="#">Admin</a></li>
+                                    <li>03 June, 2023</li>
+                                </ul>
+                                <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor
+                                    invidunt labore.</p>
+                                <a class="more" href="#">Learn More <i class="fa fa-chevron-circle-right"></i></a>
+                            </div>
+                        </div> <!-- single blog -->
+                    </div>
+                    <div class="col-lg-4 col-md-7">
+                        <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                            <div class="blog-image">
+                                <img src="main/home/images/blog-3.jpg" alt="blog">
+                            </div>
+                            <div class="blog-content">
+                                <ul class="meta">
+                                    <li>Posted By: <a href="#">Admin</a></li>
+                                    <li>03 June, 2023</li>
+                                </ul>
+                                <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor
+                                    invidunt labore.</p>
+                                <a class="more" href="#">Learn More <i class="fa fa-chevron-circle-right"></i></a>
+                            </div>
+                        </div> <!-- single blog -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </section>
 
 
-    <%- include('../layout/footer.ejs') %>
-    <%- include('../layout/scripts.ejs') %>
-    <!-- Update the src of the following custom script -->
-    <script src=""></script>
+        <%- include('../layout/footer.ejs') %>
+            <%- include('../layout/scripts.ejs') %>
+                <!-- Update the src of the following custom script -->
+                <script src=""></script>
 </body>
+
 </html>

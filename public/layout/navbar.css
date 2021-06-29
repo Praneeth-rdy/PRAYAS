@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
 
 .nav-heading {
     font-size: 38px;
+    font-family: 'Raleway', sans-serif!important;
+    font-weight: 600;
 }
 
 nav.navbar {
-    padding: 10px 5vw;
+    padding: 12px 6vw;
     background-color: #f1f1f1!important;
 }
 
@@ -14,4 +18,12 @@ nav.navbar {
 
 .add-shadow {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+.navbar-brand img {
+    margin-right: 5px;
 }

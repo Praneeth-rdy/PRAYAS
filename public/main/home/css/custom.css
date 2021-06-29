@@ -4,11 +4,11 @@
 }
 
 .welcome-section{
-    padding-top: 40px;
+    padding-top: 110px;
     padding-bottom: 40px;
     align-items: center;
     background-color: #f1f1f1;
-    height: 500px;
+    height: 380px;
 }
 
 .welcome-section .welcome-content{
@@ -18,9 +18,11 @@
 
 .welcome-section .welcome-image-container img{
     max-width: 100%;
+    opacity: 0.8;
 }
 
 .welcome-content h1{
+    font-size: 38px;
     text-align: left;
 }
 
@@ -31,4 +33,22 @@
 .welcome-content button{
     padding: 6px;
     font-size: 12px;
+}
+
+.intro p {
+    font-size: 18px;
+}
+.intro span {
+    font-weight: bold;
+}
+
+.intro {
+    padding-bottom: 0;
+}
+
+@media (min-width: 767px) {
+    .welcome-section {
+        padding-top: 40px;
+        height: 500px;
+    }
 }
