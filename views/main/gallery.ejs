@@ -1,18 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <%- include('../layout/head.ejs') %>
-    <!-- Update the href of the following custom script -->
-    <link rel="stylesheet" href="#">
+        <!-- Update the href of the following custom script -->
+        <link rel="stylesheet" href="#">
 </head>
+
 <body>
     <%- include('../layout/navbar.ejs') %>
-    
-    <!-- Your main body goes here -->
 
-    <%- include('../layout/footer.ejs') %>
-    <%- include('../layout/scripts.ejs') %>
-    <!-- Update the src of the following custom script -->
-    <script src=""></script>
+        <!-- Your main body goes here -->
+        <div class="main-container">
+            <section class="heading-section">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="col-12 text-center">Gallery</h2>
+                        <p class="col-12 p-4 text-center"></p>
+                    </div>
+                </div>
+            </section>
+            <section id="portfolio" class="project-masonry-area pt-0">
+                <div class="container">
+                    <div class="row grid" data-masonry='{"percentPosition": true }'>
+                        <div class="col-lg-4 col-sm-6 grid-item apps creative laptop">
+                            <div class="single-gallery gallery-masonry mt-30">
+                                <div class="gallery-image">
+                                    <img src="main/home/images/portfolio-1.jpg" alt="portfolio">
+                                </div>
+                                <div class="gallery-icon">
+                                    <a class="image-popup" href="main/home/images/portfolio-1.jpg">
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div> <!-- single gallery -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6 grid-item branding creative" style="flex-grow:0;">
+                            <div class="single-gallery gallery-masonry mt-30">
+                                <div class="gallery-image">
+                                    <img src="main/home/images/portfolio-2.jpg" alt="portfolio">
+                                </div>
+                                <div class="gallery-icon">
+                                    <a class="image-popup" href="main/home/images/portfolio-2.jpg">
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div> <!-- single gallery -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6 grid-item apps branding product">
+                            <div class="single-gallery gallery-masonry mt-30">
+                                <div class="gallery-image">
+                                    <img src="main/home/images/portfolio-3.jpg" alt="portfolio">
+                                </div>
+                                <div class="gallery-icon">
+                                    <a class="image-popup" href="main/home/images/portfolio-3.jpg">
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div> <!-- single gallery -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6 grid-item laptop product">
+                            <div class="single-gallery gallery-masonry mt-30">
+                                <div class="gallery-image">
+                                    <img src="main/home/images/portfolio-5.jpg" alt="portfolio">
+                                </div>
+                                <div class="gallery-icon">
+                                    <a class="image-popup" href="main/home/images/portfolio-5.jpg">
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div> <!-- single gallery -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6 grid-item branding creative">
+                            <div class="single-gallery gallery-masonry mt-30">
+                                <div class="gallery-image">
+                                    <img src="main/home/images/portfolio-4.jpg" alt="portfolio">
+                                </div>
+                                <div class="gallery-icon">
+                                    <a class="image-popup" href="main/home/images/portfolio-4.jpg">
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div> <!-- single gallery -->
+                        </div>
+                        <div class="col-lg-4 col-sm-6 grid-item apps laptop product">
+                            <div class="single-gallery gallery-masonry mt-30">
+                                <div class="gallery-image">
+                                    <img src="main/home/images/portfolio-6.jpg" alt="portfolio">
+                                </div>
+                                <div class="gallery-icon">
+                                    <a class="image-popup" href="main/home/images/portfolio-6.jpg">
+                                        <span></span>
+                                    </a>
+                                </div>
+                            </div> <!-- single gallery -->
+                        </div>
+                    </div> <!-- row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="gallery-btn mt-60 text-center">
+                                <a class="main-btn" href="/gallery">Load More</a>
+                            </div>
+                        </div>
+                    </div> <!-- row -->
+                </div> <!-- container -->
+            </section>
+        </div>
+
+        <%- include('../layout/footer.ejs') %>
+        <%- include('../layout/scripts.ejs') %>
+        <!-- Update the src of the following custom script -->
+        <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+            integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
+            crossorigin="anonymous" async></script>
 </body>
+
 </html>
