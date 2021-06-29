@@ -1,0 +1,14 @@
+<!-- Nav Script -->
+<script>
+    $(document).ready(function() {
+        $('a[href$="' + location.pathname + '"]').parent().addClass('active');
+    });
+    window.addEventListener('scroll',(e)=>{
+        const nav = document.querySelector('nav');
+        if(window.pageYOffset>0){
+          nav.classList.add("add-shadow");
+        }else{
+          nav.classList.remove("add-shadow");
+        }
+      });
+</script>
