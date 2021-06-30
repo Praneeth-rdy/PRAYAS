@@ -1,4 +1,4 @@
-require('dotenv').config({path: './config.env'});
+require('dotenv').config({ path: './config.env' });
 const express = require('express');
 const path = require("path");
 
@@ -16,10 +16,6 @@ app.set('port', process.env.PORT || 5050);
 
 app.use('/', require('./routes/main'));
 
-
-app.listen(app.get('port'), () => console.log(`Server Running at http://localhost:${app.get('port')}/`));
-
-app.locals.baseurl='https://demo.gyws.org/';
-app.locals.adminbaseurl = 'https://demo.gyws.org/admin/';
-
-module.exports = app;
+app.listen(app.get('port'), () => {
+    console.log(`Server Running at http://${(process.env_NODE_ENV==='production')?'172.105.49.237':'localhost'}:${app.get('port')}/`)
+});

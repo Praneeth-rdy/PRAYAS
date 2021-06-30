@@ -42,6 +42,7 @@ nav.navbar {
   @media (max-width: 767px) {
     .project-menu ul li {
       margin: 10px 15px 0;
+      text-align: center;
     }
   }
   .project-menu ul li:first-child {
