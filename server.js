@@ -18,3 +18,8 @@ app.use('/', require('./routes/main'));
 
 
 app.listen(app.get('port'), () => console.log(`Server Running at http://localhost:${app.get('port')}/`));
+
+app.locals.baseurl='https://demo.gyws.org/';
+app.locals.adminbaseurl = 'https://demo.gyws.org/admin/';
+
+module.exports = app;
