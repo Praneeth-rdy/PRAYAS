@@ -1,0 +1,57 @@
+
+.vision-mission-section .vision-mission-card {
+    padding: 40px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);
+}
+
+.vision-mission-section .vision-mission-card h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.members-words-section {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.members-words-section .members-words-heading {
+    margin-top: 2vw;
+    text-align: center;
+    font-size: 32px;
+}
+
+.members-words-section .member-card .member-info{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.members-words-section .member-card .member-info .member-img{
+    padding: 10px;
+}
+
+.members-words-section .member-card .member-info .member-name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.members-words-section .member-card .member-info .member-designation {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.members-words-section .member-card .member-info .member-social-icons {
+    font-size: 24px;
+}
+
+.members-words-section .member-card .member-info .member-social-icons a {
+    margin: 5px 10px;
+}
+
+.members-words-section .member-card .member-words{
+    padding-top: 2vw;
+}
