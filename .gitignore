@@ -108,3 +108,8 @@ dist
 config.env
 
 config/
+
+# sqlite db
+*.sqlite
+*.sqlite3
+*.db
