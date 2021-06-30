@@ -28,6 +28,13 @@ app.set('port', process.env.PORT || 5050);
 app.use('/', require('./routes/main'));
 app.use('/admin', require('./routes/admin'));
 
+// 404 middleware
+app.use((request, response, next) => {
+    response.status(404)
+        .send("Oops! The page you are looking for doesn't exist");
+    next();
+});
+
 
 // Listening at the port set before
 app.listen(app.get('port'), () => {
