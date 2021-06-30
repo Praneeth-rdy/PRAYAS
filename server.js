@@ -1,6 +1,9 @@
 // Third party imports
 require('dotenv').config({ path: './config.env' });
 const express = require('express');
+const bodyParser = require('body-parser');
+const upload = require('multer')();
+const session = require('express-session');
 const sqlite = require('sqlite3');
 
 // node inbuilt package imports
@@ -17,16 +20,39 @@ const app = express();
 app.set("views", path.join(__dirname, "views"));
 // By setting view engine here, there is no need to mention file extension again in controllers
 app.set('view engine', 'ejs');
-// Setting up the static filess
+
+// Setting up the static files
 app.use(express.static(path.join(__dirname, "public")));
-// Adding a json middleware
+
+// Adding a json middleware for parsing application/json data
 app.use(express.json());
+// For parsing application/xwww-form-urlencoded data
+app.use(bodyParser.urlencoded({ extended: true }));
+// For parsing multipart/form-data
+app.use(upload.array());
+// Adding express-session middleware
+
+app.use(session({
+    name: process.env.SESSION_NAME || 'sid',
+    resave: false,
+    saveUninitialized: false,
+    secret: process.env.SESSION_SECRET,
+    cookie: {
+        maxAge: 24 * 60 * 60 * 1000, // max age is in milliseconds. So, here maxAge is 24 hrs
+        sameSite: true,
+        secure: (process.env.NODE_ENV==='production'?true:false)
+    }
+}));
 // Setting port as a key 'port' to the app
 app.set('port', process.env.PORT || 5050);
+
+
 
 // Setting up the routes
 app.use('/', require('./routes/main'));
 app.use('/admin', require('./routes/admin'));
+
+
 
 // 404 middleware
 app.use((request, response, next) => {
