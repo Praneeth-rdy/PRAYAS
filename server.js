@@ -26,6 +26,7 @@ app.set('port', process.env.PORT || 5050);
 
 // Setting up the routes
 app.use('/', require('./routes/main'));
+app.use('/admin', require('./routes/admin'));
 
 
 // Listening at the port set before
