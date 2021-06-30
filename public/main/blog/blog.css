@@ -1,0 +1,46 @@
+.blog-section {
+    padding-bottom: 0;
+}
+
+.blog-section .blog-heading {
+    font-weight: 600;
+}
+
+.blog-section .blog-description {
+    font-size: 16px;
+}
+
+
+.blog-body {
+    padding-top: 30px;
+}
+
+.blog-body h1 {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.blog-body h2 {
+    font-size: 24px;
+    font-weight: 200;
+    margin: 10px 0;
+}
+
+.blog-body p {
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.blog-body strong {
+    font-weight: 500;
+}
+
+.blog-body .paragraph-list ul {
+    margin-left: 2vw;
+    font-size: 18px;
+    font-weight: 200;
+    list-style-type: disc;
+}
