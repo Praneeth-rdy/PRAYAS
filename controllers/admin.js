@@ -47,9 +47,10 @@ exports.logout = async (request, response, next) => {
     });
 };
 
+
+
+// Dashboard Controllers
 exports.dashboard = async (request, response, next) => {
-    const { userId } = request.session;
-    if (userId) {
-        response.send('LoggedIn')
-    }
+    const { user } = response.locals;
+    response.render('admin/dashboard/index');
 };
