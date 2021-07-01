@@ -98,10 +98,6 @@ exports.modelCRUD = async (request, response, next) => {
         });
     } else if (model) {
         response.locals.model = model;
-        for(let temp in model.rawAttributes) {
-            console.log(model.rawAttributes[temp])
-        }
-        
         // check the method
         // if get, 
         // return all blogs dashboard with a list of blogs with edit, delete buttons on each list item
