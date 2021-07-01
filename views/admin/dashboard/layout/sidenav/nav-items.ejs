@@ -4,12 +4,14 @@
         Dashboard
     </a>
     <ul class="list-unstyled navbar__sub-list js-sub-list ml-4 ml-lg-0">
-        <li>
-            <a href="/admin/dashboard/blog">
-                <i class="fa fa-file-alt"></i>
-                Blogs
-            </a>
-        </li>
+        <% for(const navItem in models){ %>
+            <li>
+                <a href="/admin/dashboard/<%= navItem %>">
+                    <!-- <i class="fa fa-file-alt"></i> -->
+                    <%= navItem %>s 
+                </a>
+            </li>
+        <% } %>
     </ul>
 </li>
 

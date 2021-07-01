@@ -3,7 +3,7 @@ const router = express.Router();
 const dashboardRouter = express.Router();
 
 const { login, logout } = require('../../controllers/admin/index');
-const { isLoggedIn, isNotLoggedIn } = require('../../middleware/auth')
+const { isLoggedIn, isNotLoggedIn, updateDashboardNav, updateDashboardInputs } = require('../../middleware/auth')
 
 
 // Auth Routes
@@ -12,6 +12,6 @@ router.route('/logout').get(isLoggedIn, logout);
 
 
 // Dashboard Routes
-router.use('/dashboard', isLoggedIn, require('./dashboard'));
+router.use('/dashboard', isLoggedIn, updateDashboardNav, updateDashboardInputs, require('./dashboard'));
 
 module.exports = router;
