@@ -4,13 +4,17 @@
         <div class="container-fluid">
             <div class="header-mobile-inner">
                 <a class="logo" href="index.html">
-                    <img src="/admin/dashboard/template/images/icon/logo.png" alt="CoolAdmin" />
+                    <img class="mobile-logo" src="/layout/images/prayas_logo_name.png" alt="CoolAdmin" />
                 </a>
-                <button class="hamburger hamburger--slider" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
+                <div class="d-flex justify-content-center">
+                    <%- include('./account-button.ejs') %> 
+                    <button class="hamburger hamburger--slider" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+
             </div>
         </div>
     </div>
@@ -119,7 +123,7 @@
 <aside class="menu-sidebar d-none d-lg-block">
     <div class="logo">
         <a href="#">
-            <img src="/admin/dashboard/template/images/icon/logo.png" alt="Cool Admin" />
+            <img src="/layout/images/prayas_logo_name.png" alt="Cool Admin" />
         </a>
     </div>
     <div class="menu-sidebar__content js-scrollbar1">
