@@ -37,7 +37,7 @@ exports.gallery = async (request, response, next) => {
 
 exports.blog = async (request, response, next) => {
     const { blogId } = request.params;
-    if (Id) {
+    if (blogId) {
         response.render("main/blog", { title: 'Blog' });
     } else {
         response.render("main/blogs_list", { title: 'Blog' });
