@@ -23,3 +23,9 @@
 <script src="/admin/dashboard/template/js/main.js"></script>
 <script src="/admin/global.js"></script>
 <script src="/admin/dashboard/dashboard.js"></script>
+<script>
+    $(document).ready(function () {
+        $('a[href~="' + location.pathname + '"]').parent().addClass('active');
+        $('a[href~="' + location.pathname + '"]').parent().parent().parent().addClass('active');
+      });
+</script>

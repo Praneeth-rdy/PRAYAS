@@ -1,14 +1,17 @@
 <!-- Nav Script for active class addition and onscroll shadow-->
 <script>
-    $(document).ready(function() {
-        $('a[href$="' + location.pathname + '"]').parent().addClass('active');
-    });
-    window.addEventListener('scroll',(e)=>{
-        const nav = document.querySelector('nav');
-        if(window.pageYOffset>0){
-          nav.classList.add("add-shadow");
-        }else{
-          nav.classList.remove("add-shadow");
-        }
-      });
+  $(window).on('load', function (event) {
+    $('.preloader').delay(500).fadeOut(500);
+  });
+  $(document).ready(function () {
+    $('a[href$="' + location.pathname + '"]').parent().addClass('active');
+  });
+  window.addEventListener('scroll', (e) => {
+    const nav = document.querySelector('nav');
+    if (window.pageYOffset > 0) {
+      nav.classList.add("add-shadow");
+    } else {
+      nav.classList.remove("add-shadow");
+    }
+  });
 </script>
