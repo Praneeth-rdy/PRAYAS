@@ -18,8 +18,14 @@
             </div>
         </div>
     </div>
-    <%- include('../sidenav/mobile-nav.ejs') %> 
+    <%- include('../sidenav/mobile-nav.ejs') %>
 </header>
 <!-- END HEADER MOBILE-->
 
-<%- include('../sidenav/desktop-nav.ejs') %> 
+<%- include('../sidenav/desktop-nav.ejs') %>
+
+<div id="request-status" class="alert alert-success d-none justify-content-between pl-4 pr-4 align-items-center"
+    role="alert">
+    <span></span>
+    <i class="fa fa-times" onclick="toggleFormStatusDisplay('hide', '#request-status')"></i>
+</div>

@@ -33,5 +33,8 @@ module.exports = (sequelize, DataTypes) => {
         {
             tableName: 'blogs'
         });
+    Blog.prototype.toString = function() {
+        return this.title;
+    }
     return Blog;
 };

@@ -15,6 +15,47 @@ exports.dashboard = async (request, response, next) => {
 
 exports.blog = async (request, response, next) => {
     const { user } = response.locals;
-    console.log();
-    response.render('admin/dashboard/index', { title: 'blog' });
+    const { blogId } = request.params;
+    if (blogId) {
+        await Blog.findOne({
+            where: {
+                id: blogId
+            }
+        }).then(async (blog) => {
+            try {
+                if (request.method == 'GET') {
+                    return response.render('/admin/dashboard/model/rud.ejs', { title: 'Blog' });
+                } else if (request.method == 'PUT') {
+                    await blog.update(request.body);
+                    response.send({ success: true });
+
+                } else if (request.method == 'DELETE') {
+                    console.log('Delete request')
+                    await blog.destroy();
+                }
+            } catch (error) {
+                console.log(error.message);
+            }
+        }).catch((error) => {
+            console.log(error.message);
+            return response.send('Invalid Request');
+        });
+    } else {
+        // check the method
+        // if get, 
+        // return all blogs dashboard with a list of blogs with edit, delete buttons on each list item
+        // and a single button modal to create a blog
+        if (request.method == 'GET') {
+            await Blog.findAll().then((blogs) => {
+                response.locals.entries = blogs;
+                // console.log(blogs)
+            });
+            return response.render('admin/dashboard/model/index', { title: 'blog' });
+        } else if (request.method == 'POST') {
+            await Blog.create(request.body);
+            return response.redirect('/admin/dashboard/blog');
+        }
+        // if post, create the blog if not exist
+    }
+    response.send('Invalid Request');
 };

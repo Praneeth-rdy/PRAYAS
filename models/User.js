@@ -21,6 +21,10 @@ module.exports = (sequelize, DataTypes) => {
         {
             tableName: 'users'
         });
+    
+    User.prototype.toString = function() {
+        return this.username;
+    }
 
     User.prototype.verifyPassword = async function(password) {
         return await bcrypt.compare(password, this.password);
