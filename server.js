@@ -60,7 +60,7 @@ app.use(async (request, response, next) => {
 
 // Setting up the routes
 app.use('/', require('./routes/main'));
-app.use('/admin', require('./routes/admin'));
+app.use('/admin', require('./routes/admin/index'));
 
 
 

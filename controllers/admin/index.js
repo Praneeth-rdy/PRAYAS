@@ -1,4 +1,4 @@
-const models = require('../models');
+const models = require('../../models');
 
 
 exports.login = async (request, response, next) => {
@@ -45,12 +45,4 @@ exports.logout = async (request, response, next) => {
         // Then redirect to login page
         response.redirect('/admin/login')
     });
-};
-
-
-
-// Dashboard Controllers
-exports.dashboard = async (request, response, next) => {
-    const { user } = response.locals;
-    response.render('admin/dashboard/index', { title: 'dashboard' });
 };

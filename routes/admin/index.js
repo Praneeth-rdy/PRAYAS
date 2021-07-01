@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const dashboardRouter = express.Router();
 
-const { login, logout, dashboard } = require('../controllers/admin');
-const { isLoggedIn, isNotLoggedIn } = require('../middleware/auth')
+const { login, logout } = require('../../controllers/admin/index');
+const { isLoggedIn, isNotLoggedIn } = require('../../middleware/auth')
 
 
 // Auth Routes
@@ -12,8 +12,6 @@ router.route('/logout').get(isLoggedIn, logout);
 
 
 // Dashboard Routes
-dashboardRouter.route('/').get(dashboard).post(dashboard);
-
-router.use('/dashboard', isLoggedIn, dashboardRouter);
+router.use('/dashboard', isLoggedIn, require('./dashboard'));
 
 module.exports = router;
