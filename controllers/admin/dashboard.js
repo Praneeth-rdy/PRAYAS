@@ -24,7 +24,7 @@ exports.blog = async (request, response, next) => {
         }).then(async (blog) => {
             try {
                 if (request.method == 'GET') {
-                    return response.render('/admin/dashboard/model/rud.ejs', { title: 'Blog' });
+                    response.render('admin/dashboard/model/rud.ejs', { title: 'Blog' });
                 } else if (request.method == 'PUT') {
                     await blog.update(request.body);
                     response.send({ success: true });
@@ -32,13 +32,16 @@ exports.blog = async (request, response, next) => {
                 } else if (request.method == 'DELETE') {
                     console.log('Delete request')
                     await blog.destroy();
+                    response.send({ success: true });
+                } else {
+                    response.send('Invalid Request');
                 }
             } catch (error) {
                 console.log(error.message);
             }
         }).catch((error) => {
             console.log(error.message);
-            return response.send('Invalid Request');
+            return response.send(error.message);
         });
     } else {
         // check the method
@@ -54,8 +57,9 @@ exports.blog = async (request, response, next) => {
         } else if (request.method == 'POST') {
             await Blog.create(request.body);
             return response.redirect('/admin/dashboard/blog');
+        } else {
+            response.send('Invalid Request');
         }
         // if post, create the blog if not exist
     }
-    response.send('Invalid Request');
 };

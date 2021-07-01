@@ -11,13 +11,29 @@ $('.form-control').change((event) => {
 
 $("button[data-method='delete']").click(async (event) => {
     var btn = event.target;
-    console.log(btn)
-    var dataToDelete = btn.getAttribute('data-delete');
+    var dataToDelete = btn.getAttribute('element-delete');
     var requestUrl = btn.getAttribute('data-url');
     $(dataToDelete).toggle();
     await sendRequest({
         url: (window.location.origin + requestUrl),
         type: 'delete'
+    },
+        'Entry successfully deleted!',
+        'Oops! An error occured while deleting the entry!',
+        '#request-status', '#request-status span'
+    );
+});
+
+$("button[data-method='put']").click(async (event) => {
+    var btn = event.target;
+    console.log(btn)
+    var formToSubmit = btn.getAttribute('form-put');
+    var requestUrl = btn.getAttribute('data-url');
+    $(dataToDelete).toggle();
+    await sendRequest({
+        url: (window.location.origin + requestUrl),
+        type: 'put',
+        data: $(formToSubmit).serialize()
     },
         'Entry successfully deleted!',
         'Oops! An error occured while deleting the entry!',
