@@ -40,7 +40,7 @@ app.use(session({
     cookie: {
         maxAge: 24 * 60 * 60 * 1000, // max age is in milliseconds. So, here maxAge is 24 hrs
         sameSite: true,
-        secure: (process.env.NODE_ENV === 'production' ? true : false)
+        secure: (process.env.NODE_ENV === 'production' ? false : false)
     }
 }));
 // Setting port as a key 'port' to the app
@@ -84,7 +84,7 @@ app.listen(app.get('port'), () => {
         console.log(err.message);
     });
     // Loggin the server host name and port
-    console.log(`Server Running at http://${(process.env_NODE_ENV === 'production') ? '172.105.49.237' : 'localhost'}:${app.get('port')}/`)
+    console.log(`Server Running at http://${(process.env.NODE_ENV === 'production') ? '172.105.49.237' : 'localhost'}:${app.get('port')}/`)
 });
 
 
