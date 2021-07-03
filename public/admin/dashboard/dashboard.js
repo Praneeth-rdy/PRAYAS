@@ -104,11 +104,6 @@ $("button[data-method='post']").click(async (event) => {
         data: $(formToSubmit).serialize({
             checkboxesAsBools: true
         })
-    }, () => {}, () => {
-        $(statusElement).text('Oops! An error occured while updating the entry!');
-        $(statusContainerElement).addClass('alert-danger');
-        $(statusContainerElement).removeClass('alert-success');
-        toggleFormStatusDisplay('display', statusContainerElement);
     });
     window.location.reload(true);
 });

@@ -31,7 +31,6 @@ exports.modelCRUD = async (request, response, next) => {
                 if (request.method == 'GET') {
                     response.render('admin/dashboard/model/rud.ejs', { title: 'Blog' });
                 } else if (request.method == 'PUT') {
-                    console.log(request.body)
                     await modelItem.update(request.body);
                     response.send({ success: true });
 
@@ -62,7 +61,6 @@ exports.modelCRUD = async (request, response, next) => {
             });
             return response.render('admin/dashboard/model/index', { title: 'blog' });
         } else if (request.method == 'POST') {
-            console.log(request.body)
             await model.create(request.body);
             return response.redirect('/admin/dashboard/blog');
         } else {
