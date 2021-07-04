@@ -1,3 +1,8 @@
+const fs = require("fs");
+
+const models = require("../models");
+const Image = models.Image;
+
 const fetchData = require('../utils/fetchData');
 
 exports.home = async (request, response, next) => {
@@ -54,4 +59,36 @@ exports.contact = async (request, response, next) => {
 
 exports.temp = (request, response, next) => {
     response.render('temp', { title: 'Demo', books: ['book1', 'book2', 'book3'] })
+}
+
+exports.upload = async (request, response, next) => {
+    if(request.method == 'POST') {
+        try {
+            console.log(request.file);
+        
+            if (request.file == undefined) {
+              return response.send(`You must select a file.`);
+            }
+        
+            Image.create({
+              type: request.file.mimetype,
+              name: request.file.originalname,
+              data: fs.readFileSync(
+                __basedir + "/public/media/" + request.file.filename
+              ),
+            }).then((image) => {
+              fs.writeFileSync(
+                __basedir + "/public/media/tmp/" + image.name,
+                image.data
+              );
+        
+              return response.send(`File has been uploaded.`);
+            });
+          } catch (error) {
+            console.log(error);
+            return response.send(`Error when trying upload images: ${error}`);
+          }
+    } else {
+        response.render('upload', { title: 'Upload' });
+    }
 }

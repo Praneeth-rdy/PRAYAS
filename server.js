@@ -2,7 +2,7 @@
 require('dotenv').config({ path: './config.env' });
 const express = require('express');
 const bodyParser = require('body-parser');
-const upload = require('multer')();
+// const upload = require('multer')();
 const session = require('express-session');
 const sqlite = require('sqlite3');
 
@@ -15,6 +15,8 @@ const models = require('./models'); // import all the models
 
 // Creating an express app
 const app = express();
+
+global.__basedir = __dirname;
 
 // Configuring the views folder using which the controllers serve the webpages
 app.set("views", path.join(__dirname, "views"));
@@ -29,7 +31,7 @@ app.use(express.json());
 // For parsing application/xwww-form-urlencoded data
 app.use(bodyParser.urlencoded({ extended: true }));
 // For parsing multipart/form-data
-app.use(upload.array());
+// app.use(upload.array());
 // Adding express-session middleware
 
 app.use(session({
