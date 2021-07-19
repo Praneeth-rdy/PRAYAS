@@ -13,7 +13,7 @@ router.route('/blog/').get(blog);
 router.route('/blog/:blogId/').get(blog);
 router.route('/contact').get(contact);
 router.route('/temp').get(temp);
-router.route('/upload').get(upload).post(uploadMiddleware.single('file'), upload);
+router.route('/upload').get(upload).post(uploadMiddleware.any(), upload);
 // router.route('/blog').get(blog);
 // router.route('/projects').post(projects);
 

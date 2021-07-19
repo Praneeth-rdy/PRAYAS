@@ -64,21 +64,24 @@ exports.temp = (request, response, next) => {
 exports.upload = async (request, response, next) => {
     if(request.method == 'POST') {
         try {
-            console.log(request.file);
+            console.log(request.files);
+            // response.send({
+            //     'a':'b'
+            // });
         
-            if (request.file == undefined) {
+            if (request.files == undefined) {
               return response.send(`You must select a file.`);
             }
-        
+
             Image.create({
-              type: request.file.mimetype,
-              name: request.file.originalname,
+              type: request.files[0].mimetype,
+              name: request.files[0].originalname,
               data: fs.readFileSync(
-                __basedir + "/public/media/" + request.file.filename
+                __basedir + "/public/media/tmp/" + request.files[0].filename
               ),
             }).then((image) => {
               fs.writeFileSync(
-                __basedir + "/public/media/tmp/" + image.name,
+                __basedir + "/public/media/" + image.name,
                 image.data
               );
         
