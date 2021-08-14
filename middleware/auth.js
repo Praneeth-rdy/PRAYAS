@@ -1,4 +1,4 @@
-const models = require('../models').sequelize.models;
+const models = require('../models').prayas.models;
 
 exports.isLoggedIn = (request, response, next) => {
     if (!request.session.userId) {

@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const models = require("../models");
+const models = require("../models").prayas.models;
 const Image = models.Image;
 
 const fetchData = require('../utils/fetchData');

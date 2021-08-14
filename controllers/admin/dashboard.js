@@ -1,4 +1,4 @@
-const models = require('../../models');
+const models = require('../../models').prayas.models;
 const { User, Blog } = models;
 
 // Dashboard Controllers

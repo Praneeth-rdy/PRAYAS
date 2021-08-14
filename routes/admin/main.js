@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const dashboardRouter = express.Router();
 
-const { login, logout } = require('../../controllers/admin/index');
+const { login, logout } = require('../../controllers/admin/main');
 const { isLoggedIn, isNotLoggedIn, updateDashboardNav, updateDashboardInputs } = require('../../middleware/auth')
 
 

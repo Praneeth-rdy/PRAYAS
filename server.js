@@ -45,6 +45,7 @@ app.use(session({
         secure: (process.env.NODE_ENV === 'production' ? false : false)
     }
 }));
+
 // Setting port as a key 'port' to the app
 app.set('port', process.env.PORT || 5050);
 
@@ -62,7 +63,8 @@ app.use(async (request, response, next) => {
 
 // Setting up the routes
 app.use('/', require('./routes/main'));
-app.use('/admin', require('./routes/admin/index'));
+app.use('/admin', require('./routes/admin/main'));
+app.use('/api', require('./routes/api/main'));
 
 
 
@@ -76,11 +78,17 @@ app.use((request, response, next) => {
 
 // Listening at the port set before
 app.listen(app.get('port'), () => {
-
     // Creates all the tables required, if not exist
-    models.sequelize.sync().then(() => {
+    models.prayas.sync().then(() => {
         // Logging after promise resolve
-        console.log('DB sequelized\n');
+        console.log('PRAYAS DB sequelized\n');
+    }).catch((err) => {
+        // loggin if there is any error while sequelizing
+        console.log(err.message);
+    });
+    models.kmc.sync().then(() => {
+        // Logging after promise resolve
+        console.log('KMC DB sequelized\n');
     }).catch((err) => {
         // loggin if there is any error while sequelizing
         console.log(err.message);
@@ -88,5 +96,4 @@ app.listen(app.get('port'), () => {
     // Loggin the server host name and port
     console.log(`Server Running at http://${(process.env.NODE_ENV === 'production') ? '172.105.49.237' : 'localhost'}:${app.get('port')}/`)
 });
-
 
