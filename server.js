@@ -10,8 +10,8 @@ const sqlite = require('sqlite3');
 const path = require('path');
 
 // filesystem imports
-
 const models = require('./models'); // import all the models
+const errorHandler = require('./middleware/error');
 
 // Creating an express app
 const app = express();
@@ -75,6 +75,8 @@ app.use((request, response, next) => {
     next();
 });
 
+// Error Handler (Should be last piece of middleware)
+app.use(errorHandler);
 
 // Listening at the port set before
 app.listen(app.get('port'), () => {

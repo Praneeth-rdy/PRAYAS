@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define('User', {
@@ -27,13 +28,21 @@ module.exports = (sequelize, DataTypes) => {
         {
             tableName: 'users'
         });
-    
-    User.prototype.toString = function() {
+
+    User.prototype.toString = function () {
         return this.username;
     }
 
-    User.prototype.verifyPassword = async function(password) {
+    User.prototype.verifyPassword = async function (password) {
         return await bcrypt.compare(password, this.password);
+    }
+
+    User.prototype.getSignedToken = function () {
+        return jwt.sign(
+            { id: this.id },
+            process.env.JWT_SECRET,
+            // { expiresIn: process.env.JWT_EXPIRE }
+        );
     }
 
     User.afterValidate(async (user, options) => {
