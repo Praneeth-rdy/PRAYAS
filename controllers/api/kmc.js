@@ -54,5 +54,6 @@ exports.userCRUD = async (request, response, next) => {
 };
 
 exports.getUserInfo = (request, response, next) => {
-    response.send(JSON.stringify(response.locals.user));
+    const user = response.locals.user;
+    response.send({ username: user.username, isAdmin: user.isAdmin, validTill: user.validTill });
 }
