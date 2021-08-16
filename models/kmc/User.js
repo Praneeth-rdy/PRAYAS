@@ -19,10 +19,12 @@ module.exports = (sequelize, DataTypes) => {
             },
         },
         isAdmin: {
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            defaultValue: false
         },
         validTill: {
-            type: DataTypes.DATE
+            type: DataTypes.DATE,
+            defaultValue: Date.now()
         },
     },
         {

@@ -37,20 +37,41 @@ exports.userCRUD = async (request, response, next) => {
     const { id } = request.params;
     if (!(id)) {
         if (request.method == 'POST') {
-
+            try {
+                await User.create(request.body);
+            } catch (error) {
+                return response.send({
+                    success: "false",
+                    error
+                });
+            }
         } else {
-
+            response.send({
+                message: "Invalid Request"
+            });
         }
     } else {
-        if (request.method == 'PUT') {
-
-        } else if (request.method == 'DELETE') {
-
-        } else {
-            console.log(User);
-        }
+        await User.findOne({
+            where: {
+                id
+            }
+        }).then(async (user) => {
+            if (request.method == 'PUT') {
+                await user.update(request.body);
+                response.send({ success: true, user });
+            } else if (request.method == 'DELETE') {
+                await user.destroy();
+                response.send({ success: true });
+            } else if (request.method == 'GET') {
+                response.send(JSON.stringify(user));
+            } else {
+                response.send({
+                    success: false,
+                    message: "Invalid Request"
+                });
+            }
+        });
     }
-    response.send('userCrud');
 };
 
 exports.getUserInfo = (request, response, next) => {

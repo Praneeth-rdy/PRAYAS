@@ -33,7 +33,6 @@ exports.modelCRUD = async (request, response, next) => {
                 } else if (request.method == 'PUT') {
                     await modelItem.update(request.body);
                     response.send({ success: true });
-
                 } else if (request.method == 'DELETE') {
                     console.log('Delete request')
                     await modelItem.destroy();

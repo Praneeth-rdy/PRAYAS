@@ -32,3 +32,13 @@ const tokenAuth = async (request, response, next, User) => {
 module.exports.kmcAuthCheck = (request, response, next) => {
     tokenAuth(request, response, next, kmcUser);
 }
+
+module.exports.kmcAdminCheck = (request, response, next) => {
+    if(response.locals.user.isAdmin){
+        next();
+    } else {
+        response.send({
+            message: "You don't have access to this resource"
+        });
+    }
+}
