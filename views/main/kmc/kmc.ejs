@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../../layout/head.ejs') %>
+        <!-- Update the href of the following custom script -->
+        <link rel="stylesheet" href="/main/kmc/kmc-styles.css">
+</head>
+
+<body>
+    <%- include('../../layout/navbar.ejs') %>
+
+        <!-- Your main body goes here -->
+        <!-- Get In Touch Form -->
+        <div class="main-container">
+            <section class="heading-section">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="col-12 text-center">KMC</h2>
+                        <p class="col-12 p-4 text-center"></p>
+                    </div>
+                </div>
+            </section>
+            <section class="payment-section container">
+                <div class="row">
+                    <div class="service-container col-5">
+                        <h1>
+                            Counselling + Mock Tests
+                        </h1>
+                        <p>
+                            This package comes with both counselling and mock tests.
+                            This would help the student in his/her allround development.
+                        </p>
+                        <form>
+                            <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                                data-payment_button_id="pl_I0Ox8eKhAgY3Va" async> </script>
+                        </form>
+                    </div>
+                    <div class="service-container col-5">
+                        <h1>
+                            Only Counselling
+                        </h1>
+                        <p>
+                            This package comes with only counselling and no mock tests.
+                            This would help the student in his/her JOSAA Counselling.
+                        </p>
+                        <form>
+                            <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                                data-payment_button_id="pl_I0CvA18PigARuK" async> </script>
+                        </form>
+                    </div>
+                </div>
+                <p class="text-center">
+                    Having a referral code? <a href="/kmc/referral/">Click Here</a>
+                </p>
+            </section>
+        </div>
+
+        <%- include('../../layout/footer.ejs') %>
+            <%- include('../../layout/scripts.ejs') %>
+</body>
+
+</html>

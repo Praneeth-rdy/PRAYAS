@@ -1,0 +1,27 @@
+.payment-section {
+    padding-top: 0;
+}
+
+.payment-section .service-container {
+    border: 2px solid #369b36;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.payment-section .service-container h1 {
+    font-size: 24px;
+}
+
+.payment-section .service-container p {
+    margin: 8px 5px;
+}
+
+.payment-section #referral {
+    padding: 5px;
+}
+
+.payment-section #referral-options .error-msg {
+    color: red;
+}

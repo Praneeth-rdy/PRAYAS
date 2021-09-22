@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 // const upload = require('multer')();
 const session = require('express-session');
 const sqlite = require('sqlite3');
+const cors = require('cors');
 
 // node inbuilt package imports
 const path = require('path');
@@ -22,6 +23,17 @@ global.__basedir = __dirname;
 app.set("views", path.join(__dirname, "views"));
 // By setting view engine here, there is no need to mention file extension again in controllers
 app.set('view engine', 'ejs');
+
+
+const corsOptions = {
+    "origin": ['http://localhost:3000'],
+    "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+    "preflightContinue": false,
+    "optionsSuccessStatus": 204,
+    "credentials": true
+}
+
+app.use(cors(corsOptions));
 
 // Setting up the static files
 app.use(express.static(path.join(__dirname, "public")));

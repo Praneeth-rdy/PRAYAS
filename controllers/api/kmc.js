@@ -46,9 +46,8 @@ exports.userCRUD = async (request, response, next) => {
                 });
             }
         } else {
-            response.send({
-                message: "Invalid Request"
-            });
+            const users = await User.findAll();
+            response.send({ users: JSON.stringify(users) });
         }
     } else {
         await User.findOne({
@@ -57,13 +56,14 @@ exports.userCRUD = async (request, response, next) => {
             }
         }).then(async (user) => {
             if (request.method == 'PUT') {
+                console.log(request.body);
                 await user.update(request.body);
                 response.send({ success: true, user });
             } else if (request.method == 'DELETE') {
                 await user.destroy();
                 response.send({ success: true });
             } else if (request.method == 'GET') {
-                response.send(JSON.stringify(user));
+                response.send({ user: JSON.stringify(user) });
             } else {
                 response.send({
                     success: false,

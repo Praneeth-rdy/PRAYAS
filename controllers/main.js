@@ -57,6 +57,30 @@ exports.contact = async (request, response, next) => {
   response.render("main/contact", { title: 'Contact' });
 };
 
+exports.kmc = async (request, response, next) => {
+  const [sheetName, authToken, isVertical] = ['HomeVars', process.env.AUTH_TOKEN, true];
+  // const jsonResponse = await fetchData({ sheetName, authToken, isVertical });
+  // console.log(jsonResponse);
+  response.render("main/kmc/kmc", { title: 'KMC' });
+};
+
+exports.kmcReferral = async (request, response, next) => {
+  const [sheetName, authToken, isVertical] = ['Referrals', process.env.AUTH_TOKEN, false];
+  // const jsonResponse = await fetchData({ sheetName, authToken, isVertical });
+  // console.log(jsonResponse);
+  response.render("main/kmc/referral", { title: 'KMC' });
+};
+
+exports.getKmcReferral = async (request, response, next) => {
+  const [sheetName, authToken, isVertical] = ['Referrals', process.env.AUTH_TOKEN, false];
+  const jsonResponse = await fetchData({ sheetName, authToken, isVertical });
+  let data = [];
+  for(let item of jsonResponse.data){
+    data.push(item.referral);
+  }
+  response.send(data);
+};
+
 exports.temp = (request, response, next) => {
   response.render('temp', { title: 'Demo', books: ['book1', 'book2', 'book3'] })
 }
