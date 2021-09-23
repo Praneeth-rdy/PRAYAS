@@ -25,3 +25,11 @@
 .payment-section #referral-options .error-msg {
     color: red;
 }
+
+.payment-section .referral-msg {
+    font-size: 18px;
+}
+
+.description{
+    font-size: 16px;
+}

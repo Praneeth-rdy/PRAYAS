@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <%- include('../../layout/navbar.ejs') %>
+    <div%- include('../../layout/navbar.ejs') %>
 
         <!-- Your main body goes here -->
         <!-- Get In Touch Form -->
@@ -16,14 +16,74 @@
             <section class="heading-section">
                 <div class="container">
                     <div class="row">
-                        <h2 class="col-12 text-center">KMC</h2>
-                        <p class="col-12 p-4 text-center"></p>
+                        <h1 class="col-12 text-center">KMC</h1>
+                        <p class="col-12 p-3 text-center description">
+                            KMC(Komcluez Marketing Consultancy Pvt Ltd) is a business initiative under the PRAYAS run by
+                            the students of IIT Kharagpur constantly supporting and helping rural as well as
+                            institutional enterprises and making them a social enterprise.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="info-section container pt-5">
+                <h3 class="text-center">
+                    Are you looking for career guidance?
+                </h3>
+                <div class="row">
+                    <p class="p-3 description">
+                        We are a team of IITians who have gone through the same process of JOSAA, and we are well aware
+                        of the confusion while filling the preferences, due to availability of multiple options and lack
+                        of complete information. And therefore, we have a team of Education and Exam counselors who
+                        provide guidance and help students to find out the college and branch options based on their
+                        performance in JEE. We make constant efforts to guide students to choose the right opportunity.
+                    </p>
+                </div>
+                <h3 class="text-center">
+                    Getting Started
+                </h3>
+                <div class="row">
+                    <div class="description col-12">
+                        <h5>Step1 (Payment)</h5>
+                        <p class="p-3">
+                            <strong>
+                                Case - 1)
+                            </strong>
+                            If you have a referral code then go to <a href="/kmc/referral">this</a> page and pay the
+                            joining fee. <br />
+                            <strong>
+                                Case - 2)
+                            </strong>
+                            If you don't have a referral code, then directly pay using the below payment
+                            links.
+                        </p>
+                    </div>
+                    <div class="description col-12">
+                        <h5>Step2 (Signing Up)</h5>
+                        <p class="p-3">
+                            Once you pay the fee, you will be redirected to the <a
+                                href="https://kmc.gradeazy.com/">kmc.gradeazy.com</a> where you need to singup using the
+                            same name and email you used during payment.
+                        </p>
+                    </div>
+                    <div class="description col-12">
+                        <h5>Step-3 (Account Activation)</h5>
+                        <p class="p-3">
+                            After you singup, our team will review your payment and activate your account.
+                        </p>
+                    </div>
+                    <div class="description col-12 text-center">
+                        <h5>
+                            Hoorah!! Now you can login to access the tests and our team will reach out to you for counselling.
+                        </h5>
+                        <!-- <p class="p-3">
+                            After you singup, our team will review your payment and activate your account.
+                        </p> -->
                     </div>
                 </div>
             </section>
             <section class="payment-section container">
                 <div class="row">
-                    <div class="service-container col-5">
+                    <div class="service-container col-10 col-md-5">
                         <h1>
                             Counselling + Mock Tests
                         </h1>
@@ -36,7 +96,7 @@
                                 data-payment_button_id="pl_I0Ox8eKhAgY3Va" async> </script>
                         </form>
                     </div>
-                    <div class="service-container col-5">
+                    <div class="service-container col-10 col-md-5">
                         <h1>
                             Only Counselling
                         </h1>
@@ -50,7 +110,7 @@
                         </form>
                     </div>
                 </div>
-                <p class="text-center">
+                <p class="referral-msg text-center">
                     Having a referral code? <a href="/kmc/referral/">Click Here</a>
                 </p>
             </section>
