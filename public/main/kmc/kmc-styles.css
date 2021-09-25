@@ -27,7 +27,12 @@
 }
 
 .payment-section .referral-msg {
-    font-size: 18px;
+    font-size: 24px;
+}
+
+.payment-section a, .info-section a {
+    color: #0c720c;
+    font-weight: 600;
 }
 
 .description{
