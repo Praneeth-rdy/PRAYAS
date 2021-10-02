@@ -9,7 +9,7 @@ verifyReferral.addEventListener('click', function (e) {
     errorMsg.textContent = '';
     verificationLoader.classList.remove('d-none');
     let referrals = [1, 2, 3, 4];
-    fetch('https://prayas.gyws.org/kmc/getKmcReferral')
+    fetch('http://localhost:5050/kmc/getKmcReferral')
         .then((data) => data.json())
         .then((data) => {
             if (data.indexOf(referralElement.value) != -1) {
