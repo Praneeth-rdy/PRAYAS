@@ -15,6 +15,8 @@ router.route('/contact').get(contact);
 router.route('/kmc').get(kmc);
 router.route('/kmc/referral').get(kmcReferral);
 router.route('/kmc/getKmcReferral').get(getKmcReferral);
+
+// Testing routes
 router.route('/temp').get(temp);
 router.route('/upload').get(upload).post(uploadMiddleware.any(), upload);
 // router.route('/blog').get(blog);
